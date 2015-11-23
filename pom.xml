@@ -149,7 +149,7 @@
                             <outputDirectory>${basedir}/src/main/xsd</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/../src/main/resources</directory>
+                                    <directory>${basedir}/src/main/resources</directory>
                                     <includes>
                                         <include>apollo_types_3.1.0.xsd</include>
                                         <include>library_service_3.1.0.xsd</include>

@@ -1,0 +1,11 @@
+*.bak
+.DS_Store
+.classpath
+.project
+.settings
+dependency-reduced-pom.xml
+target/
+*.iml
+**/*.idea/
+/src/main/xsd/
+.*.swp
