@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>xsd-types</artifactId>
     <packaging>jar</packaging>
 
     <distributionManagement>
-       <repository>
+        <repository>
             <id>rods-nexus-deployment</id>
             <name>RODS Nexus</name>
             <url>https://internal.rods.pitt.edu/nexus/content/repositories/apollo-releases/</url>
@@ -33,7 +33,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
 
     <dependencies>
@@ -94,7 +93,6 @@
                 </dependency>
 
 
-
                 <dependency>
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-rt-transports-http</artifactId>
@@ -103,18 +101,7 @@
             </dependencies>
         </profile>
 
-        <profile>
-            <!-- See http://metro.java.net/guide/Using_Mavenized_Metro_Binaries.html 
-            for more Metro/Maven config info -->
-            <id>Metro</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.glassfish.metro</groupId>
-                    <artifactId>webservices-rt</artifactId>
-                    <version>2.2.1-1</version>
-                </dependency>
-            </dependencies>
-        </profile>
+
     </profiles>
 
     <build>
@@ -252,6 +239,15 @@
             </plugin>
 
         </plugins>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.xsd</include>
+                </includes>
+
+            </resource>
+        </resources>
     </build>
     <name>Apollo XSD types</name>
     <groupId>edu.pitt.apollo</groupId>
