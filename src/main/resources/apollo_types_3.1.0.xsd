@@ -6,6 +6,13 @@
             <maxInclusive value="1"/>
         </restriction>
     </simpleType>
+    
+    <element name="InfectiousDiseaseScenarioElement" 
+                 type="tns:InfectiousDiseaseScenario"/>
+    
+    <element name="InfectiousDiseaseTransmissionExperimentSpecificationElement" 
+             type="tns:InfectiousDiseaseTransmissionExperimentSpecification"/>
+    
     <simpleType name="ApolloSoftwareTypeEnum">
         <restriction base="string">
             <enumeration value="simulator"/>
