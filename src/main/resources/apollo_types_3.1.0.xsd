@@ -2753,4 +2753,10 @@
             <element name="longitude" type="tns:Longitude" minOccurs="1" maxOccurs="1"/>
         </sequence>
     </complexType>
+
+    <element name="InfectiousDiseaseScenarioElement"
+                     type="tns:InfectiousDiseaseScenario"/>
+
+    <element name="InfectiousDiseaseTransmissionExperimentSpecificationElement"
+                 type="tns:InfectiousDiseaseTransmissionExperimentSpecification"/>
 </schema>
