@@ -110,7 +110,7 @@
         <complexContent>
             <extension base="tns:Treatment">
                 <sequence>
-                    <element name="vaccineId" type="tns:vaccineOntologyId" maxOccurs="1" minOccurs="1"/>
+                    <element name="vaccineId" type="tns:VaccineOntologyId" maxOccurs="1" minOccurs="1"/>
                     <element name="vaccinationEfficacies" type="tns:VaccinationEfficacyForSimulatorConfiguration" maxOccurs="unbounded" minOccurs="1"/>
                 </sequence>
             </extension>
@@ -567,7 +567,7 @@
     <complexType name="TemplatedInfectiousDiseaseControlMeasureUrlForSoftware">
         <sequence>
             <element name="softwareIdentification" type="tns:SoftwareIdentification" minOccurs="1" maxOccurs="unbounded"/>
-            <element name="controlMeasureTemplateURL" type="anyURI" maxOccurs="1" minOccurs="1"/>
+            <element name="controlMeasureTemplateUrl" type="anyURI" maxOccurs="1" minOccurs="1"/>
         </sequence>
     </complexType>
     <complexType name="DiseaseSurveillanceTriggerDefinition">
@@ -975,7 +975,7 @@
         <sequence>
             <element name="singleStrategy" type="string"/>
             <element name="combinationStrategy" type="string"/>
-            <element name="SequentialCombinationStrategy" type="string"/>
+            <element name="sequentialCombinationStrategy" type="string"/>
         </sequence>
     </complexType>
     <complexType name="BaseCaseResult">
@@ -1162,7 +1162,7 @@
         </complexContent>
     </complexType>
 
-<complexType name="EpidemicCaseCounts">
+    <complexType name="EpidemicCaseCounts">
         <complexContent>
             <extension base="tns:ApolloIndexableItem">
                 <sequence>
@@ -1400,7 +1400,7 @@
             <pattern value="[0-9]+"/>
         </restriction>
     </simpleType>
-    <simpleType name="vaccineOntologyId">
+    <simpleType name="VaccineOntologyId">
         <restriction base="token">
             <pattern value="[A-Z_0-9]{2,17}"/>
         </restriction>
@@ -2267,7 +2267,7 @@
     <complexType name="InfectionSource">
         <sequence>
             <element name="infectionSourceCode" type="token" maxOccurs="1" minOccurs="0"/>
-            <element name="infectiouSourceAdditionalDescription" type="token" maxOccurs="unbounded" minOccurs="0"/>
+            <element name="infectionSourceAdditionalDescription" type="token" maxOccurs="unbounded" minOccurs="0"/>
             <element name="infectionSourceDate" type="dateTime" maxOccurs="unbounded" minOccurs="0"/>
         </sequence>
     </complexType>
