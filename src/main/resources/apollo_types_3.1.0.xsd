@@ -435,6 +435,43 @@
 			</extension>
 		</complexContent>
 	</complexType>
+
+	<complexType name="MeasuredQuantityRangeCategoryDefinition">
+		<complexContent>
+			<extension base="tns:CategoryDefinition">
+				<sequence>
+					<element name="unitOfMeasure" type="tns:UnitOfMeasureEnum"
+						maxOccurs="1" minOccurs="1" />
+					<element name="lowerBound" type="tns:Bound" maxOccurs="1"
+						minOccurs="1" />
+					<element name="upperBound" type="tns:Bound" maxOccurs="1"
+						minOccurs="1" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<complexType name="Bound">
+		<sequence>
+			<choice>
+				<element name="finiteBoundary" type="double" maxOccurs="1"
+					minOccurs="1" />
+				<element name="infiniteBoundary" type="tns:InfinityEnum"
+					maxOccurs="1" minOccurs="1" />
+			</choice>
+		</sequence>
+	</complexType>
+
+	<simpleType name="InfinityEnum">
+		<restriction base="string">
+			<enumeration value="positiveInfinity" />
+			<enumeration value="negativeInfinity" />
+		</restriction>
+	</simpleType>
+
+
+
+
 	<complexType name="DiseaseOutcomeCategoryDefinition">
 		<complexContent>
 			<extension base="tns:CategoryDefinition">
@@ -1258,8 +1295,9 @@
 			<enumeration value="recovery" />
 		</restriction>
 	</simpleType>
-	
-	<!--   will refactor to PlaceTypeEnum (and in doing so, figure out where to put the Nzara Cotton Factory -->
+
+	<!-- will refactor to PlaceTypeEnum (and in doing so, figure out where to 
+		put the Nzara Cotton Factory -->
 	<simpleType name="PlaceEnum">
 		<restriction base="string">
 			<enumeration value="preschool" />
@@ -1367,17 +1405,16 @@
 			<element name="spatialGranularity" type="tns:SpatialGranularityEnum"
 				maxOccurs="1" minOccurs="1" />
 
-			<element name="placeType" type="tns:PlaceEnum"
-				maxOccurs="unbounded" minOccurs="0" />
+			<element name="placeType" type="tns:PlaceEnum" maxOccurs="unbounded"
+				minOccurs="0" />
 			<element name="infectionState" type="tns:InfectionStateEnum"
 				maxOccurs="unbounded" minOccurs="0">
 			</element>
 			<element name="diseaseOutcome" type="tns:DiseaseOutcomeEnum"
 				maxOccurs="unbounded" minOccurs="0">
 			</element>
-			<element name="otherVariables"
-				type="tns:VariableAndCategoryDefinition" maxOccurs="unbounded"
-				minOccurs="0" />
+			<element name="otherVariables" type="tns:VariableAndCategoryDefinition"
+				maxOccurs="unbounded" minOccurs="0" />
 
 		</sequence>
 	</complexType>
@@ -2016,6 +2053,8 @@
 				minOccurs="1" />
 		</sequence>
 	</complexType>
+
+	<!-- LOOK AT THIS SOMETIME -->
 	<complexType name="Category">
 		<sequence>
 			<element name="categoryDefinition" type="tns:CategoryDefinition"
@@ -2094,6 +2133,8 @@
 			<enumeration value="disabilityStatus" />
 			<enumeration value="employmentStatus" />
 			<enumeration value="place" />
+			<enumeration value="measuredQuantityRange" />
+
 		</restriction>
 	</simpleType>
 
