@@ -2361,8 +2361,10 @@
         <sequence>
             <element name="startDate" type="date" maxOccurs="1" minOccurs="1"/>
             <element name="startDateDefinition" type="tns:EpidemicPeriodBoundaryDefinitionEnum" maxOccurs="1" minOccurs="1"/>
+            <element name="startDateReferenceId" type="nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
             <element name="endDate" type="date" maxOccurs="1" minOccurs="0"/>
             <element name="endDateDefinition" type="tns:EpidemicPeriodBoundaryDefinitionEnum" maxOccurs="1" minOccurs="0"/>
+            <element name="endDateReferenceId" type="nonNegativeInteger" maxOccurs="1" minOccurs="0"/>
         </sequence>
     </complexType>
     <complexType name="ContactDefinition">
