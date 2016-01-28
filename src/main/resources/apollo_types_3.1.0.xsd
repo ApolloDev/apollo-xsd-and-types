@@ -2442,7 +2442,7 @@
             <enumeration value="deathOfLastCase"/>
             <enumeration value="administrativeDeclaration"/>
             <enumeration value="lastLabCaseConfirmation"/>
-            <enumeration value="42DaysAfterLastConfirmedCaseTestedNegativeTwice"/>
+            <enumeration value="FortyTwoDaysAfterLastConfirmedCaseTestedNegativeTwice"/>
         </restriction>
     </simpleType>
     <complexType name="CountType"/>
