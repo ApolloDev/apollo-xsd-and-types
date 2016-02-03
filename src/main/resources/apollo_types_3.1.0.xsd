@@ -1397,25 +1397,29 @@
 			<choice>
 				<element name="speciesToCount" type="tns:NcbiTaxonId"
 					maxOccurs="1" minOccurs="1" />
-				<element name="thingsToCount" type="string" maxOccurs="1"
-					minOccurs="1" />
+				<element name="thingsToCount" type="string"
+					maxOccurs="1" minOccurs="1" />
 			</choice>
-			<element name="temporalGranularity" type="tns:TemporalGranularityEnum"
-				maxOccurs="1" minOccurs="1" />
-			<element name="spatialGranularity" type="tns:SpatialGranularityEnum"
-				maxOccurs="1" minOccurs="1" />
+			<element name="temporalGranularity"
+				type="tns:TemporalGranularityEnum" maxOccurs="1" minOccurs="1" />
+			<element name="spatialGranularity"
+				type="tns:SpatialGranularityEnum" maxOccurs="1" minOccurs="1" />
 
-			<element name="placeType" type="tns:PlaceEnum" maxOccurs="unbounded"
-				minOccurs="0" />
-			<element name="infectionState" type="tns:InfectionStateEnum"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="diseaseOutcome" type="tns:DiseaseOutcomeEnum"
-				maxOccurs="unbounded" minOccurs="0">
-			</element>
-			<element name="otherVariables" type="tns:VariableAndCategoryDefinition"
+			<element name="placeType" type="tns:PlaceEnum"
 				maxOccurs="unbounded" minOccurs="0" />
+            <element name="infectionStates" type="tns:InfectionStateEnum" maxOccurs="unbounded" minOccurs="0">
+			</element>
+            <element name="infectionStateTransitions"
+				type="tns:InfectionStateTransition" maxOccurs="unbounded" minOccurs="0">
+			</element>
+            <element name="diseaseOutcomes" type="tns:DiseaseOutcomeEnum"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
 
+			<element name="diseaseOutcomeTransitions" type="tns:DiseaseOutcomeTransition" maxOccurs="unbounded" minOccurs="0"></element>
+			<element name="otherVariables"
+				type="tns:VariableAndCategoryDefinition" maxOccurs="unbounded"
+				minOccurs="0" />
 		</sequence>
 	</complexType>
 
@@ -3635,4 +3639,32 @@
 	</complexType>
 
 
+
+	<complexType name="InfectionStateTransition">
+		<sequence>
+			<element name="apolloLabel" type="tns:InfectionStateTransitionEnum" maxOccurs="1" minOccurs="0"></element>
+			<element name="priorInfectionState"
+				type="tns:InfectionStateEnum" maxOccurs="1" minOccurs="0">
+			</element>
+			<element name="newInfectionState"
+				type="tns:InfectionStateEnum" maxOccurs="1" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+    <complexType name="InfectionStateTransitionEnum"></complexType>
+
+    <complexType name="diseaseOutcomeTransitionEnum"></complexType>
+
+    <complexType name="DiseaseOutcomeTransition">
+    	<sequence>
+            <element name="apolloLabel" type="tns:diseaseOutcomeTransitionEnum" maxOccurs="1" minOccurs="0"></element>
+            <element name="priorDiseaseOutcome"
+    			type="tns:DiseaseOutcomeEnum" maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="newDiseaseOutcome"
+    			type="tns:DiseaseOutcomeEnum" maxOccurs="1" minOccurs="1">
+    		</element>
+    	</sequence>
+    </complexType>
 </schema>
