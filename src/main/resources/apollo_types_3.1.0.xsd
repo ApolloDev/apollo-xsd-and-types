@@ -2990,7 +2990,7 @@
 		<sequence>
 			<!-- sourceCaseCountArray is the "scraped" PAHO data -->
 			<element name="sourceCaseCountArray" type="tns:CaseCountArray"
-				minOccurs="1" maxOccurs="unbounded"></element>
+				minOccurs="1" maxOccurs="1"></element>
 			<element name="descriptionOfEstimationMethod" type="string"
 				minOccurs="1" maxOccurs="1"></element>
 		</sequence>
