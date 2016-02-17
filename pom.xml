@@ -146,6 +146,7 @@
                                         <include>apollo_service_4.0.xsd</include>
                                         <include>data_service_4.0.xsd</include>
                                         <include>synthetic_population_service_4.0.xsd</include>
+                                        <include>filestore_service_4.0.xsd</include>
                                     </includes>
                                     <filtering>true</filtering>
 
@@ -215,6 +216,7 @@
                         <include>apollo_service_4.0.xsd</include>
                         <include>data_service_4.0.xsd</include>
                         <include>synthetic_population_service_4.0.xsd</include>
+                        <include>filestore_service_4.0.xsd</include>
                     </schemaIncludes>
                     <extension>true</extension>
 
