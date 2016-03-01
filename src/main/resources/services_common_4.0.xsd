@@ -191,6 +191,8 @@
 			<enumeration value="unknown_runid" />
 			<enumeration value="run_terminated" />
 			<enumeration value="authentication_failure" />
+			<enumeration value="translating_output" />
+			<enumeration value="output_translated" />
 		</restriction>
 	</simpleType>
 
