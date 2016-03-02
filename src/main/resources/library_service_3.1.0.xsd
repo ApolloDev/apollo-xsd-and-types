@@ -16,22 +16,20 @@
 				<sequence>
 					<element name="name" type="token" minOccurs="1" maxOccurs="1"></element>
 					<element name="description" type="string" minOccurs="0" maxOccurs="1"></element>
-					<element name="membersOfCollection" type="int" minOccurs="0" maxOccurs="unbounded"></element>
-					<element name="subCollection" type="tns:LibrarySubCollection" minOccurs="0" maxOccurs="1"></element>
+					<element name="membersOfCollection" type="tns:MemberOfCollection" minOccurs="0" maxOccurs="unbounded"></element>
 					<element name="javaClassNameOfMembers" type="token" minOccurs="1" maxOccurs="1"></element>
 				</sequence>
 			</extension>
 		</complexContent>
 	</complexType>
 
-	<complexType name="LibrarySubCollection">
+	<complexType name="MemberOfCollection">
 		<complexContent>
 			<extension base="Q1:ApolloIndexableItem">
 				<sequence>
-					<element name="name" type="token" minOccurs="1" maxOccurs="1"></element>
-					<element name="description" type="string" minOccurs="0" maxOccurs="1"></element>
-					<element name="membersOfCollection" type="int" minOccurs="0" maxOccurs="unbounded"></element>
-					<element name="subCollection" type="tns:LibrarySubCollection" minOccurs="0" maxOccurs="1"></element>
+
+					<element name="urn" type="int" minOccurs="0" maxOccurs="unbounded"></element>
+					<element name="subCollectionUrn" type="int" minOccurs="0" maxOccurs="1"></element>
 				</sequence>
 			</extension>
 		</complexContent>
