@@ -28,7 +28,7 @@
 			<extension base="Q1:ApolloIndexableItem">
 				<sequence>
 
-					<element name="urn" type="int" minOccurs="0" maxOccurs="unbounded"></element>
+					<element name="urn" type="int" minOccurs="1" maxOccurs="1"></element>
 					<element name="subCollectionUrn" type="int" minOccurs="0" maxOccurs="1"></element>
 				</sequence>
 			</extension>
