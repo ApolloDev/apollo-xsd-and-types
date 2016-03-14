@@ -9,15 +9,13 @@
 
     <element name="FileIdentificationElement" type="tns:FileIdentification"/>
 
-    <element name="FileIdentification">
-        <complexType>
-            <sequence>
-                <element name="format" type="common:ContentDataFormatEnum"></element>
-                <element name="type" type="common:ContentDataTypeEnum"></element>
-                <element name="label" type="tns:Filename"></element>
-            </sequence>
-        </complexType>
-    </element>
+    <complexType name="FileIdentification">
+        <sequence>
+            <element name="format" type="common:ContentDataFormatEnum"></element>
+            <element name="type" type="common:ContentDataTypeEnum"></element>
+            <element name="label" type="tns:Filename"></element>
+        </sequence>
+    </complexType>
 
     <simpleType name="Filename">
         <restriction base="token">
