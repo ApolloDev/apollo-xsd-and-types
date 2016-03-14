@@ -193,6 +193,7 @@
 			<enumeration value="authentication_failure" />
 			<enumeration value="translating_output" />
 			<enumeration value="output_translated" />
+			<enumeration value="not_found" />
 		</restriction>
 	</simpleType>
 
