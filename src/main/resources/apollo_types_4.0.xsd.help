@@ -2124,6 +2124,7 @@
 			<enumeration value="gender" />
 			<enumeration value="sex" />
 			<enumeration value="ageRange" />
+			<enumeration value="location" />
 			<enumeration value="timeSpan" />
 			<enumeration value="diseaseOutcome" />
 			<enumeration value="sourceOfInfection" />
@@ -3633,6 +3634,16 @@
 				maxOccurs="1" minOccurs="1" />
 		</sequence>
 	</complexType>
+	<complexType name="LocationCategoryDefinition">
+    		<complexContent>
+    			<extension base="tns:CategoryDefinition">
+    				<sequence>
+    					<element name="apolloLocationCode" type="tns:ApolloLocationCode"
+    						maxOccurs="1" minOccurs="1" />
+    				</sequence>
+    			</extension>
+    		</complexContent>
+    	</complexType>
 
 
 </schema>

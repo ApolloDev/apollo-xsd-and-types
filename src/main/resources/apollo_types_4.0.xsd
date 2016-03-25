@@ -3198,7 +3198,7 @@
       <element name="dischargePath" type="tns:DischargePathEnum"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="readmissionDelayIndays" type="tns:Duration"
+      <element name="readmissionDelayInDays" type="tns:Duration"
                maxOccurs="1" minOccurs="0">
       </element>
       <element name="probability" type="tns:Probability" maxOccurs="1"
@@ -3722,6 +3722,7 @@
       <enumeration value="employmentStatus" />
       <enumeration value="place" />
       <enumeration value="measuredQuantityRange" />
+      <enumeration value="location" />
     </restriction>
   </simpleType>
 
@@ -4170,7 +4171,7 @@
     </restriction>
   </simpleType>
 
-  <!-- JDL ADDED CLASSES -->
+  <!-- ######## JDL ADDED CLASSES ######  -->
 
   <complexType name="SimulatorTimeSpecification">
     <sequence>
@@ -4262,5 +4263,17 @@
       </extension>
     </complexContent>
   </complexType>
+
+  <complexType name="LocationCategoryDefinition">
+    <complexContent>
+      <extension base="tns:CategoryDefinition">
+        <sequence>
+          <element name="apolloLocationCode" type="tns:ApolloLocationCode"
+                   maxOccurs="1" minOccurs="1" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
 
 </schema>
