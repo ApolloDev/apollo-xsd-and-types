@@ -168,6 +168,8 @@
       <choice>
         <element name="value" type="nonNegativeInteger" maxOccurs="1"
                  minOccurs="1" />
+          <element name="unconditionalProbabilityDistribution" type="tns:UnconditionalProbabilityDistribution"
+          maxOccurs="1" minOccurs="1" />
         <element name="nextCategoricalVariable" type="tns:CategoricalVariableNode"
                  maxOccurs="1" minOccurs="1" />
       </choice>
@@ -909,7 +911,7 @@
         <element name="exactValue" type="tns:NonNegativeDouble"
                  maxOccurs="1" minOccurs="1">
         </element>
-        <element name="uncertainValue" type="tns:ProbabilityDistribution"
+        <element name="uncertainValue" type="tns:UncertainValue"
                  maxOccurs="1" minOccurs="1">
         </element>
       </choice>
@@ -1272,9 +1274,8 @@
                    maxOccurs="unbounded" minOccurs="0"></element>
           <element name="referenceId" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0"/>
-            <element name="templatedInfectiousDiseaseControlMeasureUrlsForSoftware"
-                     type="tns:TemplatedInfectiousDiseaseControlMeasureUrlForSoftware">
-          </element>
+          <element name="templatedInfectiousDiseaseControlMeasureUrlsForSoftware" type="tns:TemplatedInfectiousDiseaseControlMeasureUrlForSoftware" minOccurs="0" maxOccurs="unbounded"/>
+
         </sequence>
       </extension>
     </complexContent>
@@ -2677,9 +2678,11 @@
       <element name="parameterName" type="string" maxOccurs="1"
                minOccurs="1">
       </element>
-      <element name="parameterValue" type="double" maxOccurs="1"
-               minOccurs="1">
-      </element>
+      <choice>
+                <element name="parameterIntValue" type="int" maxOccurs="1" minOccurs="1"/>
+                <element name="parameterFloatValue" type="double" maxOccurs="1" minOccurs="1"/>
+                <element name="parameterTokenValue" type="token" maxOccurs="1" minOccurs="1"/>
+            </choice>
     </sequence>
   </complexType>
 
