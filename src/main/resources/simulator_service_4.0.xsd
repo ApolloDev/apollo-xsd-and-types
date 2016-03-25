@@ -29,16 +29,16 @@
 		</sequence>
 	</complexType>
 
-	<complexType name="GetPopulationAndEnvironmentCensusResult">
-		<sequence>
-			<element name="methodCallStatus" type="common:MethodCallStatus"
-				maxOccurs="1" minOccurs="1">
-			</element>
-			<element name="populationAndEnvironmentCensus" type="apollo:PopulationAndEnvironmentCensus"
-				maxOccurs="1" minOccurs="1">
-			</element>
-		</sequence>
-	</complexType>
+	<!--<complexType name="GetPopulationAndEnvironmentCensusResult">-->
+		<!--<sequence>-->
+			<!--<element name="methodCallStatus" type="common:MethodCallStatus"-->
+				<!--maxOccurs="1" minOccurs="1">-->
+			<!--</element>-->
+			<!--<element name="populationAndEnvironmentCensus" type="apollo:PopulationAndEnvironmentCensus"-->
+				<!--maxOccurs="1" minOccurs="1">-->
+			<!--</element>-->
+		<!--</sequence>-->
+	<!--</complexType>-->
 
 	<complexType name="GetConfigurationFileForSimulationResult">
 		<sequence>

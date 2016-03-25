@@ -897,7 +897,7 @@
                  maxOccurs="unbounded" minOccurs="1" />
         <!-- <element name="forGlobalEpidemicSimulator" type="tns:GesParametersForContactAndTransmission"
 					maxOccurs="1" minOccurs="1" /> -->
-        <element name="innoculationRate" type="tns:Rate" maxOccurs="1"
+        <element name="inoculationRate" type="tns:Rate" maxOccurs="1"
                  minOccurs="0"></element>
       </choice>
     </sequence>
@@ -1088,7 +1088,7 @@
       <element name="ageRange" type="tns:AgeRangeCategoryDefinition"
                maxOccurs="1" minOccurs="0">
       </element>
-      <element name="gender" type="tns:GenderEnum" maxOccurs="1"
+      <element name="sex" type="tns:GenderEnum" maxOccurs="1"
                minOccurs="0">
       </element>
       <choice>
@@ -1163,7 +1163,7 @@
       <element name="ageRange" type="tns:AgeRangeCategoryDefinition"
                maxOccurs="1" minOccurs="0">
       </element>
-      <element name="gender" type="tns:GenderEnum" maxOccurs="1"
+      <element name="sex" type="tns:GenderEnum" maxOccurs="1"
                minOccurs="0">
       </element>
       <element name="treatmentState" type="tns:TreatmentStateEnum"
@@ -1271,7 +1271,9 @@
           <element name="logisticalSystems" type="tns:LogisticalSystem"
                    maxOccurs="unbounded" minOccurs="0"></element>
           <element name="referenceId" type="nonNegativeInteger"
-                   maxOccurs="1" minOccurs="0">
+                   maxOccurs="1" minOccurs="0"/>
+            <element name="templatedInfectiousDiseaseControlMeasureUrlsForSoftware"
+                     type="tns:TemplatedInfectiousDiseaseControlMeasureUrlForSoftware">
           </element>
         </sequence>
       </extension>
@@ -1767,7 +1769,7 @@
       <element name="ageRange" type="tns:AgeRangeCategoryDefinition"
                maxOccurs="1" minOccurs="0">
       </element>
-      <element name="gender" type="tns:GenderEnum" maxOccurs="1"
+      <element name="sex" type="tns:GenderEnum" maxOccurs="1"
                minOccurs="0">
       </element>
       <element name="diseaseOutcome" type="tns:DiseaseOutcomeEnum"
@@ -2299,7 +2301,7 @@
     <complexContent>
       <extension base="tns:Households">
         <sequence>
-          <element name="url" type="token" maxOccurs="unbounded"
+          <element name="url" type="anyURI" maxOccurs="unbounded"
                    minOccurs="0" />
         </sequence>
       </extension>
@@ -2452,7 +2454,7 @@
           <element name="caseLists" type="tns:CaseList" maxOccurs="unbounded"
                    minOccurs="0">
           </element>
-          <element name="caseCounts" type="tns:CaseCount" maxOccurs="unbounded"
+          <element name="epidemicCaseCounts" type="tns:EpidemicCaseCounts" maxOccurs="unbounded"
                    minOccurs="0">
           </element>
           <element name="transmissionTrees" type="tns:TransmissionTree"
@@ -2526,7 +2528,7 @@
       <enumeration value="daily_dose" />
       <enumeration value="percent_of_population_vaccinated" />
       <enumeration value="visits" />
-      <enumeration value="innoculations" />
+      <enumeration value="inoculations" />
       <enumeration value="perIndividualPerYear" />
       <enumeration value="house" />
       <enumeration value="insecticideTreatedNets" />
@@ -3065,7 +3067,7 @@
       <element name="publication" type="string" maxOccurs="1"
                minOccurs="0">
       </element>
-      <element name="url" type="string" maxOccurs="1" minOccurs="1" />
+      <element name="url" type="anyURI" maxOccurs="1" minOccurs="1" />
       <element name="pubMedId" type="nonNegativeInteger" maxOccurs="1"
                minOccurs="0" />
       <element name="orcId" type="string" maxOccurs="1" minOccurs="0">
@@ -3130,8 +3132,10 @@
         <element name="place" type="tns:PlaceEnum" maxOccurs="1"
                  minOccurs="0">
         </element>
-        <element name="namedPolygon" type="tns:NamedMultiGeometry"
-                 maxOccurs="1" minOccurs="0"></element>
+        <element name="locationCode" type="tns:ApolloLocationCode"
+                 maxOccurs="1" minOccurs="1" />
+        <element name="latLongPair" type="tns:LatLongPair"
+                 minOccurs="1" maxOccurs="1" />
       </choice>
     </sequence>
   </complexType>
@@ -3281,7 +3285,7 @@
     <complexContent>
       <extension base="tns:CategoryDefinition">
         <sequence>
-          <element name="gender" type="tns:GenderEnum" maxOccurs="1"
+          <element name="sex" type="tns:GenderEnum" maxOccurs="1"
                    minOccurs="1" />
         </sequence>
       </extension>
@@ -3416,7 +3420,7 @@
   <simpleType name="TimeScaleEnum">
     <restriction base="string">
       <enumeration value="simulatorTimeScale" />
-      <enumeration value="decsisionTimeScale" />
+      <enumeration value="decisionTimeScale" />
       <enumeration value="controlMeasureTimeScale" />
       <enumeration value="individualTreatmentTimeScale" />
       <enumeration value="epidemicTimeScale" />
@@ -3745,7 +3749,7 @@
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
-          <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlMeasure"
+          <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlStrategy"
                    maxOccurs="unbounded" minOccurs="0" />
           <element name="infectiousDiseaseTransmissionModelIds" type="tns:SoftwareIdentification"
                    maxOccurs="unbounded" minOccurs="1" />
@@ -3822,7 +3826,7 @@
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
-          <element name="controlStrategyAlternatives" type="tns:InfectiousDiseaseControlMeasure"
+          <element name="controlStrategyAlternatives" type="tns:InfectiousDiseaseControlStrategy"
                    maxOccurs="unbounded" minOccurs="1" />
           <element name="diseaseTransmissionModelChanceNode" type="tns:ModelIdAndProbability"
                    maxOccurs="unbounded" minOccurs="1" />
@@ -4178,4 +4182,85 @@
                minOccurs="1" />
     </sequence>
   </complexType>
+
+  <complexType name="LatLongPair">
+    <sequence>
+      <element name="latitutde" type="tns:Latitude" minOccurs="1"
+               maxOccurs="1" />
+      <element name="longitude" type="tns:Longitude" minOccurs="1"
+               maxOccurs="1" />
+    </sequence>
+  </complexType>
+
+  <complexType name="EpidemicCaseCounts">
+    <complexContent>
+      <extension base="tns:ApolloIndexableItem">
+        <sequence>
+          <element name="totalCaseCount" type="tns:CaseCount"
+                   maxOccurs="1" minOccurs="0" />
+          <element name="totalFatalCaseCount" type="tns:CaseCount"
+                   maxOccurs="1" minOccurs="0" />
+          <element name="otherCaseCounts" type="tns:CaseCount"
+                   maxOccurs="unbounded" minOccurs="0" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="InfectiousDiseaseControlStrategy">
+    <sequence>
+      <element name="controlMeasures" type="tns:InfectiousDiseaseControlMeasure"
+               maxOccurs="unbounded" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="LiberalSickLeaveControlMeasure">
+    <complexContent>
+      <extension base="tns:InfectiousDiseaseControlMeasure">
+        <sequence>
+          <element name="compliance" type="tns:ProbabilisticParameter"
+                   maxOccurs="1" minOccurs="1" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType
+          name="OneWaySensitivityAnalysisOfContinousVariableSpecification">
+    <complexContent>
+      <extension base="tns:SensitivityAnalysisSpecification">
+        <sequence>
+          <element name="xPathToVariable" type="token" maxOccurs="1"
+                   minOccurs="1" />
+          <element name="minimumValue" type="double" maxOccurs="1"
+                   minOccurs="1" />
+          <element name="maximumValue" type="double" maxOccurs="1"
+                   minOccurs="1" />
+          <element name="numberOfDiscretizations" type="integer"
+                   maxOccurs="1" minOccurs="0" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="TemplatedInfectiousDiseaseControlMeasureUrlForSoftware">
+    <sequence>
+      <element name="softwareIdentification" type="tns:SoftwareIdentification"
+               minOccurs="1" maxOccurs="unbounded" />
+      <element name="controlMeasureTemplateUrl" type="anyURI"
+               maxOccurs="1" minOccurs="1" />
+    </sequence>
+  </complexType>
+
+  <complexType name="VoluntaryHouseholdQuarantineControlMeasure">
+    <complexContent>
+      <extension base="tns:InfectiousDiseaseControlMeasure">
+        <sequence>
+          <element name="compliance" type="tns:ProbabilisticParameter"
+                   maxOccurs="1" minOccurs="1" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
 </schema>
