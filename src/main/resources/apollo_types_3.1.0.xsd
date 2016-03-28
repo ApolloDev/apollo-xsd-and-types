@@ -3326,15 +3326,16 @@
     <complexContent>
       <extension base="tns:CategoryDefinition">
         <sequence>
+          <element name="label" type="token" maxOccurs="1" minOccurs="0"></element>
           <element name="unitOfTimeForLowerBound" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="lowerBound" type="nonNegativeInteger"
+          <element name="lowerBound" type="tns:Bound"
                    maxOccurs="1" minOccurs="1" />
           <element name="unitOfTimeForUpperBound" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="upperBound" type="nonNegativeInteger"
+          <element name="upperBound" type="tns:Bound"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
