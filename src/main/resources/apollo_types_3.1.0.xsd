@@ -2035,16 +2035,6 @@
 			<enumeration value="bushMeat" />
 		</restriction>
 	</simpleType>
-	<simpleType name="ConditioningVariableEnum">
-		<restriction base="string">
-			<enumeration value="biologicalSex" />
-			<enumeration value="sex" />
-			<enumeration value="ageRange" />
-			<enumeration value="timeSpan" />
-			<enumeration value="diseaseOutcome" />
-			<enumeration value="sourceOfInfection" />
-		</restriction>
-	</simpleType>
 	<simpleType name="ApolloIndexableItemTypeEnum">
 		<restriction base="string">
 			<enumeration value="InfectionType" />
@@ -2975,7 +2965,7 @@
 			</choice>
 		</sequence>
 	</complexType>
-	
+
 	<complexType name="TemporalCountArrayWithUniformIntervals">
 		<sequence>
 			<element name="nDimensions" type="positiveInteger" maxOccurs="1"
@@ -3541,4 +3531,63 @@
 
 	<element name="InfectiousDiseaseTransmissionExperimentSpecificationElement"
 		type="tns:InfectiousDiseaseTransmissionExperimentSpecification" />
+
+	<complexType name="LocationCategoryDefinition">
+
+		<complexContent>
+
+			<extension base="tns:CategoryDefinition">
+
+				<sequence>
+
+					<element name="apolloLocationCode" type="tns:ApolloLocationCode"
+
+						maxOccurs="1" minOccurs="1" />
+
+				</sequence>
+
+			</extension>
+
+		</complexContent>
+
+	</complexType>
+
+	<simpleType name="ConditioningVariableEnum">
+
+		<restriction base="string">
+
+			<enumeration value="gender" />
+
+			<enumeration value="biologicalSex" />
+
+			<enumeration value="sex" />
+
+			<enumeration value="ageRange" />
+
+			<enumeration value="timeSpan" />
+
+			<enumeration value="diseaseOutcome" />
+
+			<enumeration value="sourceOfInfection" />
+
+			<enumeration value="householdMedianIncome" />
+
+			<enumeration value="maritalStatus" />
+
+			<enumeration value="schoolingStatus" />
+
+			<enumeration value="disabilityStatus" />
+
+			<enumeration value="employmentStatus" />
+
+			<enumeration value="place" />
+
+			<enumeration value="measuredQuantityRange" />
+
+			<enumeration value="location" />
+
+		</restriction>
+
+	</simpleType>
 </schema>
+
