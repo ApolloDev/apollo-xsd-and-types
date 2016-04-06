@@ -3539,7 +3539,7 @@
 			<extension base="tns:CategoryDefinition">
 
 				<sequence>
-
+					<element name="spatialGranularity" type="tns:SpatialGranularityEnum" maxOccurs="1" minOccurs="1"/>
 					<element name="apolloLocationCode" type="tns:ApolloLocationCode"
 
 						maxOccurs="1" minOccurs="1" />
