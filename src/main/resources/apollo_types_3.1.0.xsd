@@ -3628,7 +3628,7 @@
       <element name="diseaseOutcomeTransitions" type="tns:DiseaseOutcomeTransition"
                maxOccurs="unbounded" minOccurs="0">
       </element>
-      <element name="otherVariables" type="tns:VariableAndCategoryDefinition"
+      <element name="otherVariables" type="tns:VariableAndCategoryDefinitions"
                maxOccurs="unbounded" minOccurs="0" />
     </sequence>
   </complexType>
@@ -3700,7 +3700,7 @@
     </sequence>
   </complexType>
 
-  <complexType name="VariableAndCategoryDefinition">
+  <complexType name="VariableAndCategoryDefinitions">
     <sequence>
       <element name="variable" type="tns:CategoricalVariableEnum"
                maxOccurs="1" minOccurs="1" />
@@ -4268,17 +4268,16 @@
     </complexContent>
   </complexType>
 
-  <complexType name="LocationCategoryDefinition">
-    <complexContent>
-      <extension base="tns:CategoryDefinition">
-        <sequence>
-          <element name="apolloLocationCode" type="tns:ApolloLocationCode"
-                   maxOccurs="1" minOccurs="1" />
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-
+	<complexType name="LocationCategoryDefinition">
+		<complexContent>
+			<extension base="tns:CategoryDefinition">
+				<sequence>
+					<element name="spatialGranularity" type="tns:SpatialGranularityEnum" maxOccurs="1" minOccurs="1"/>
+					<element name="apolloLocationCode" type="tns:ApolloLocationCode" maxOccurs="1" minOccurs="1" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
 
 </schema>
 
