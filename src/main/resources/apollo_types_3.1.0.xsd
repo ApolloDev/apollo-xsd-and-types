@@ -2949,6 +2949,8 @@
 				minOccurs="1" />
 			<element name="caseDefinitionsIncluded" type="tns:CaseDefinitionEnum"
 				maxOccurs="unbounded" minOccurs="1" />
+				<element name="caseCountArrayDescription" type="tns:CaseCountArrayDescription"
+				maxOccurs="1" minOccurs="0" />
 			<choice>
 				<element name="totalCount" type="nonNegativeInteger"
 					maxOccurs="1" minOccurs="1" />
@@ -2973,6 +2975,13 @@
 			<element name="nTemporalIntervals" type="string"></element>
 			<element name="firstArrayAxis" type="tns:ArrayAxis"
 				maxOccurs="1" minOccurs="1" />
+		</sequence>
+	</complexType>
+
+	<complexType name="CaseCountArrayDescription">
+		<sequence>
+			<element name="caseCountArrayType" type="tns:CaseCountArrayTypeEnum" maxOccurs="1"
+				minOccurs="0" />
 		</sequence>
 	</complexType>
 
@@ -3585,6 +3594,22 @@
 			<enumeration value="measuredQuantityRange" />
 
 			<enumeration value="location" />
+
+		</restriction>
+
+	</simpleType>
+
+	<simpleType name="CaseCountArrayTypeEnum">
+
+		<restriction base="string">
+
+			<enumeration value="mutuallyExclusiveWithConstantLengthIntervals" />
+
+			<enumeration value="mutuallyExclusiveWithVaryingLengthIntervals" />
+
+			<enumeration value="cumulativeWithoutResets" />
+
+			<enumeration value="cumulativeWithResets" />
 
 		</restriction>
 
