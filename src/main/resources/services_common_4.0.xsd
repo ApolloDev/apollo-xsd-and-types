@@ -44,6 +44,7 @@
 			<enumeration value="CONFIGURATION_FILE" />
 			<enumeration value="IMAGE" />
 			<enumeration value="MOVIE" />
+			<enumeration value="QUERY_RESULT" />
 			<enumeration value="RUN_MESSAGE" />
 		</restriction>
 	</simpleType>
@@ -53,14 +54,14 @@
 			<enumeration value="TEXT" />
 			<enumeration value="URL" />
 			<enumeration value="ZIP" />
-			<enumeration value="HDF5" />
+			<enumeration value="HDF" />
 		</restriction>
 	</simpleType>
 
 	<simpleType name="FileTypeEnum">
 		<restriction base="string">
 			<enumeration value="CSV" />
-			<enumeration value="HDF5" />
+			<enumeration value="HDF" />
 		</restriction>
 	</simpleType>
 

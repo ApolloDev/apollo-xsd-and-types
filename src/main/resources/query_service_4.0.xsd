@@ -15,10 +15,10 @@
             <sequence>
                 <element name="runId" type="common:RunIdentification"></element>
                 <element name="simulatorCountOutputSpecifications" type="apollo:SimulatorCountOutputSpecification"
-                    minOccurs="1">
+                    minOccurs="1" maxOccurs="unbounded">
                 </element>
                 <element name="outputFormats" type="common:FileTypeEnum"
-                    minOccurs="1" />
+                    minOccurs="1" maxOccurs="unbounded" />
             </sequence>
             </extension>
         </complexContent>
