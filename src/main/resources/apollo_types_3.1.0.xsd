@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v3_1_0/"
-        xmlns:tns="http://types.apollo.pitt.edu/v3_1_0/" elementFormDefault="qualified">
+        xmlns:tns="http://types.apollo.pitt.edu/v3_1_0/" elementFormDefault="qualified"
+          xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+        
 
   <!-- The types in this file are organized into sections as follows: -->
 
@@ -28,14 +30,16 @@
 
 
   <!-- 1. INFECTIOUS DISEASE SCENARIO type -->
-  <!-- -->
+  <!-- sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000184"-->
 
-  <complexType name="InfectiousDiseaseScenario">
+  <complexType name="InfectiousDiseaseScenario" sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000184" >
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
           <element name="scenarioDate" type="dateTime" maxOccurs="1"
-                   minOccurs="1" />
+                   minOccurs="1"       
+                   sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000185​" />
+                    
           <element name="scenarioLocation" type="tns:Location"
                    maxOccurs="1" minOccurs="1">
           </element>
@@ -3754,12 +3758,11 @@
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
-          <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlStrategy"
+                    <element name="infectiousDiseaseScenarioWithoutIntervention" type="tns:InfectiousDiseaseScenario" maxOccurs="1" minOccurs="1" />
+                    <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlStrategy"
                    maxOccurs="unbounded" minOccurs="0" />
           <element name="infectiousDiseaseTransmissionModelIds" type="tns:SoftwareIdentification"
                    maxOccurs="unbounded" minOccurs="1" />
-          <element name="infectiousDiseaseScenarioWithoutIntervention"
-                   type="tns:InfectiousDiseaseScenario" maxOccurs="1" minOccurs="1" />
           <element name="sensitivityAnalyses" type="tns:SensitivityAnalysisSpecification"
                    maxOccurs="unbounded" minOccurs="0" />
         </sequence>
@@ -4242,7 +4245,7 @@
           <element name="maximumValue" type="double" maxOccurs="1"
                    minOccurs="1" />
           <element name="numberOfDiscretizations" type="integer"
-                   maxOccurs="1" minOccurs="0" />
+                   maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
     </complexContent>
