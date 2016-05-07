@@ -456,6 +456,23 @@
 				</xsd:complexType>
 			</xsd:element>
 
+			<xsd:element name="terminateRun">
+
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="terminateRunRequest" type="services:TerminateRunRequest"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="terminateRunResponse">
+
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="terminateRunResult" type="services:TerminteRunResult"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
 			<xsd:element name="getFileUrl">
 
 				<xsd:complexType>
@@ -633,6 +650,12 @@
 	<wsdl:message name="listFilesForRunResponse">
 		<wsdl:part name="parameters" element="tns:listFilesForRunResponse"></wsdl:part>
 	</wsdl:message>
+	<wsdl:message name="terminateRunRequest">
+		<wsdl:part name="parameters" element="tns:terminateRun"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="terminateRunResponse">
+		<wsdl:part name="parameters" element="tns:terminateRunResponse"></wsdl:part>
+	</wsdl:message>
 	<wsdl:message name="getFileUrlRequest">
 		<wsdl:part name="parameters" element="tns:getFileUrl"></wsdl:part>
 	</wsdl:message>
@@ -738,6 +761,10 @@
 		<wsdl:operation name="listFilesForRun">
 			<wsdl:input message="tns:listFilesForRunRequest"></wsdl:input>
 			<wsdl:output message="tns:listFilesForRunResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="terminateRun">
+			<wsdl:input message="tns:terminateRunRequest"></wsdl:input>
+			<wsdl:output message="tns:terminateRunResponse"></wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="getFileUrl">
 			<wsdl:input message="tns:getFileUrlRequest"></wsdl:input>
@@ -996,6 +1023,16 @@
 		<wsdl:operation name="listFilesForRun">
 			<soap:operation
 				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0/listFilesForRun" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="terminateRun">
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0/terminateRun" />
 			<wsdl:input>
 				<soap:body use="literal" />
 			</wsdl:input>
