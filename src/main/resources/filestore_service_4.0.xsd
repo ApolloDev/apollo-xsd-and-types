@@ -17,9 +17,43 @@
         </sequence>
     </complexType>
 
+    <complexType name="GetFileUrlRequest">
+                <sequence>
+                    <element name="runId" type="common:RunIdentification"></element>
+                    <element name="authentication" type="common:Authentication"></element>
+                    <element name="fileIdentification" type="tns:FileIdentification"
+                             maxOccurs="1" minOccurs="1">
+                    </element>
+                </sequence>
+    </complexType>
+
+    <complexType name="GetFileUrlResult">
+        <sequence>
+            <element name="status" type="common:MethodCallStatus"></element>
+            <element name="url" type="anyURI"></element>
+        </sequence>
+
+    </complexType>
+
+    <complexType name="ListFilesForRunRequest">
+                <sequence>
+                    <element name="runId" type="common:RunIdentification"></element>
+                    <element name="authentication" type="common:Authentication"></element>
+                </sequence>
+    </complexType>
+
+    <complexType name="ListFilesForRunResult">
+        <sequence>
+            <element name="status" type="common:MethodCallStatus"></element>
+            <element name="files" type="tns:FileIdentification" maxOccurs="unbounded" minOccurs="0"></element>
+        </sequence>
+
+    </complexType>
+
     <simpleType name="Filename">
         <restriction base="token">
             <pattern value="[A-Za-z0-9_\.]+"/>
         </restriction>
     </simpleType>
+
 </schema>
