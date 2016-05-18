@@ -578,7 +578,7 @@
       <element name="taxonId" type="tns:NcbiTaxonId" maxOccurs="1"
                minOccurs="1" />
       <element name="count" type="positiveInteger" maxOccurs="1"
-               minOccurs="1" />
+               minOccurs="0" />
       <element name="infectionAndImmunityCensuses" type="tns:PopulationInfectionAndImmunityCensus"
                maxOccurs="unbounded" minOccurs="0" />
       <element name="colonizationCensuses" type="tns:PopulationColonizationCensus"
@@ -751,7 +751,7 @@
 
   <complexType name="lInfection">
     <complexContent>
-      <extension base="tns:ApolloIndexableItem">
+      <extension base="tns:Infection">
         <sequence>
           <element name="location" type="tns:ApolloLocationCode"
                    maxOccurs="1" minOccurs="1" />
@@ -764,7 +764,7 @@
 
   <complexType name="Infection">
     <complexContent>
-      <extension base="tns:lInfection">
+      <extension base="tns:ApolloIndexableItem">
         <sequence>
           <element name="pathogen" type="tns:ApolloPathogenCode"
                    maxOccurs="1" minOccurs="1">
@@ -807,23 +807,22 @@
     </sequence>
   </complexType>
 
+    <complexType name="lInfectiousDisease">
+        <complexContent>
+            <extension base="tns:ApolloIndexableItem">
+                <sequence>
+                    <element name="coosalPathogen" type="tns:ApolloPathogenCode"
+                             maxOccurs="1" minOccurs="1" />
+                    <element name="hoostSpecies" type="tns:NcbiTaxonId"
+                             maxOccurs="1" minOccurs="1" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
 
-  <complexType name="lInfectiousDisease">
-    <complexContent>
-      <extension base="tns:ApolloIndexableItem">
-        <sequence>
-          <element name="coosalPathogen" type="tns:ApolloPathogenCode"
-                   maxOccurs="1" minOccurs="1" />
-          <element name="hoostSpecies" type="tns:NcbiTaxonId"
-                   maxOccurs="1" minOccurs="1" />
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-
-  <complexType name="InfectiousDisease">
-    <complexContent>
-      <extension base="tns:lInfectiousDisease">
+    <complexType name="InfectiousDisease">
+        <complexContent>
+            <extension base="tns:lInfectiousDisease">
         <sequence>
           <element name="disease" type="tns:SnomedId" maxOccurs="1"
                    minOccurs="1" />
