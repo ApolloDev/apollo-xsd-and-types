@@ -3610,7 +3610,7 @@
 			<enumeration value="cumulativeWithoutResets" />
 
 			<enumeration value="cumulativeWithResets" />
-
+			<enumeration value ="inconclusive" />
 		</restriction>
 
 	</simpleType>
