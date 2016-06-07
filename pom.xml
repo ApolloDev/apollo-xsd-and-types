@@ -6,12 +6,12 @@
 
     <distributionManagement>
         <repository>
-            <id>rods-nexus-deployment</id>
+            <id>nexus</id>
             <name>RODS Nexus</name>
             <url>https://internal.rods.pitt.edu/nexus/content/repositories/apollo-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>rods-nexus-deployment</id>
+            <id>nexus</id>
             <name>RODS Nexus</name>
             <url>https://internal.rods.pitt.edu/nexus/content/repositories/apollo-snapshots/</url>
         </snapshotRepository>
@@ -108,6 +108,17 @@
         <defaultGoal>install</defaultGoal>
 
         <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>nexus</serverId>
+                    <nexusUrl>https://internal.rods.pitt.edu/nexus</nexusUrl>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
