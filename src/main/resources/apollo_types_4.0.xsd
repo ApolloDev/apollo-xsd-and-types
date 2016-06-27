@@ -2802,7 +2802,6 @@
     </sequence>
   </complexType>
 
-
   <complexType name="CaseRecord">
     <sequence>
       <element name="caseId" type="token" maxOccurs="1" minOccurs="1">
@@ -2914,14 +2913,6 @@
                minOccurs="0" maxOccurs="unbounded" />
     </sequence>
   </complexType>
-
-  <simpleType name="CaseCountArrayTypeEnum">
-    <restriction base="string">
-      <enumeration value="resetTo0" />
-      <enumeration value="resetTo0AndTurnOffDataCollection" />
-      <enumeration value="resetTo0AndTurnBackOnDataCollection" />
-    </restriction>
-  </simpleType>
 
   <complexType name="DateSpanWithNoDataCollection">
     <sequence>
@@ -4275,6 +4266,7 @@
     <complexContent>
       <extension base="tns:CategoryDefinition">
         <sequence>
+          <element name="spatialGranularity" type="tns:SpatialGranularityEnum" maxOccurs="1" minOccurs="1"/>
           <element name="apolloLocationCode" type="tns:ApolloLocationCode"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
@@ -4282,5 +4274,20 @@
     </complexContent>
   </complexType>
 
+  <simpleType name="CaseCountArrayTypeEnum">
+
+    <restriction base="string">
+
+      <enumeration value="mutuallyExclusiveWithConstantLengthIntervals" />
+
+      <enumeration value="mutuallyExclusiveWithVaryingLengthIntervals" />
+
+      <enumeration value="cumulativeWithoutResets" />
+
+      <enumeration value="cumulativeWithResets" />
+      <enumeration value ="inconclusive" />
+    </restriction>
+
+  </simpleType>
 
 </schema>
