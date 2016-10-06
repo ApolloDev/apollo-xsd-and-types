@@ -405,12 +405,7 @@
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="getRegisteredServices">
-
 				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="authentication" type="services:Authentication">
-						</xsd:element>
-					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="getRegisteredServicesResponse">

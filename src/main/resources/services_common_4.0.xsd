@@ -119,7 +119,6 @@
 		<sequence>
 			<element name="runIdentification" type="tns:RunIdentification">
 			</element>
-			<element name="authentication" type="tns:Authentication"></element>
 		</sequence>
 	</complexType>
 
