@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v4_0/"
-        xmlns:tns="http://types.apollo.pitt.edu/v4_0/" elementFormDefault="qualified">
+	xmlns:tns="http://types.apollo.pitt.edu/v4_0/" elementFormDefault="qualified"
+	xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+
 
   <!-- The types in this file are organized into sections as follows: -->
 
@@ -16,8 +18,8 @@
   <!-- 8. Populations -->
 
   <!-- 9. Types for representing infections, contaminations, and colonization -->
-  <!-- 9. Types for representing INFECTIOUS DISEASEs -->
-  <!-- 9. CENSUS TYPES -->
+	<!-- 10. Types for representing INFECTIOUS DISEASEs -->
+	<!-- 11. CENSUS TYPES -->
 
   <!-- X. types for specifying SIMULATOR OUTPUT and storing simulator results -->
   <!-- X. types for specifying an openMalaria EXPERIMENT and storing results -->
@@ -28,14 +30,16 @@
 
 
   <!-- 1. INFECTIOUS DISEASE SCENARIO type -->
-  <!-- -->
+	<!-- sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000184" -->
 
-  <complexType name="InfectiousDiseaseScenario">
+	<complexType name="InfectiousDiseaseScenario"
+		sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000184">
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
           <element name="scenarioDate" type="dateTime" maxOccurs="1"
-                   minOccurs="1" />
+						minOccurs="1" sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000185​" />
+
           <element name="scenarioLocation" type="tns:Location"
                    maxOccurs="1" minOccurs="1">
           </element>
@@ -270,7 +274,7 @@
 
   <complexType name="Interval">
     <sequence>
-      <element name="startBoundaryDefinition" type="tns:IntervalBoundaryDefinitionEnum"
+			<element name="startBoundaryDefinition" type="tns:Interval"
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="endBoundaryDefinition" type="tns:IntervalBoundaryDefinitionEnum"
@@ -518,7 +522,7 @@
 
   <simpleType name="NcbiTaxonId">
     <restriction base="token">
-      <pattern value="[0-9]"></pattern>
+      <pattern value="[0-9]"/>
     </restriction>
   </simpleType>
 
@@ -535,7 +539,7 @@
 
   <simpleType name="SnomedId">
     <restriction base="token">
-      <pattern value="[0-9]"></pattern>
+      <pattern value="[0-9]"/>
     </restriction>
   </simpleType>
 
@@ -543,7 +547,7 @@
 
   <simpleType name="vaccineOntologyId">
     <restriction base="token">
-      <pattern value="[A-Z_0-9]{2,17}"></pattern>
+      <pattern value="[A-Z_0-9]{2,17}"/>
     </restriction>
   </simpleType>
 
@@ -551,7 +555,7 @@
 
   <simpleType name="RxNormId">
     <restriction base="token">
-      <pattern value="[0-9]"></pattern>
+      <pattern value="[0-9]"/>
     </restriction>
   </simpleType>
 
@@ -559,13 +563,13 @@
 
   <simpleType name="LoincId">
     <restriction base="string">
-      <pattern value="[0-9]{5}-[0-9]{1}"></pattern>
+      <pattern value="[0-9]{5}-[0-9]{1}"/>
     </restriction>
   </simpleType>
 
   <simpleType name="ApolloLocationCode">
     <restriction base="token">
-      <pattern value="[A-Z0-9]{2,17}"></pattern>
+      <pattern value="[A-Z0-9]{2,17}"/>
     </restriction>
   </simpleType>
 
@@ -599,9 +603,9 @@
   <complexType name="IndividualsAndHouseholds">
     <sequence>
       <element name="individuals" type="tns:Individual" maxOccurs="unbounded"
-               minOccurs="1"></element>
+               minOccurs="1"/>
       <element name="households" type="tns:Household" maxOccurs="unbounded"
-               minOccurs="0"></element>
+               minOccurs="0"/>
     </sequence>
   </complexType>
 
@@ -785,7 +789,7 @@
           </element>
           <element name="InfectionAcquisitionsFromColonizedHosts"
                    type="tns:InfectionAcquisitionFromColonizedHost" maxOccurs="unbounded"
-                   minOccurs="0"></element>
+                   minOccurs="0"/>
         </sequence>
       </extension>
     </complexContent>
@@ -800,7 +804,7 @@
         <element name="contaminatedSource" type="token" maxOccurs="1"
                  minOccurs="1" />
         <element name="colonizedHostSource" type="tns:NcbiTaxonId"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
       </choice>
       <element name="transmissionProbability" type="tns:ProbabilisticParameter"
                maxOccurs="1" minOccurs="1" />
@@ -874,7 +878,7 @@
       <choice>
         <element name="transmissionProbability" type="tns:ProbabilisticParameter"
                  maxOccurs="1" minOccurs="1" />
-        <element name="beta" type="string" maxOccurs="1" minOccurs="1"></element>
+        <element name="beta" type="string" maxOccurs="1" minOccurs="1"/>
       </choice>
     </sequence>
   </complexType>
@@ -899,7 +903,7 @@
         <!-- <element name="forGlobalEpidemicSimulator" type="tns:GesParametersForContactAndTransmission"
 					maxOccurs="1" minOccurs="1" /> -->
         <element name="inoculationRate" type="tns:Rate" maxOccurs="1"
-                 minOccurs="0"></element>
+                 minOccurs="0"/>
       </choice>
     </sequence>
   </complexType>
@@ -981,7 +985,7 @@
           <element name="colonizationDuration" type="tns:Duration"
                    maxOccurs="1" minOccurs="0" />
           <element name="probabilityOfInfectionOverTime" type="tns:ConditionalProbabilityDistribution"
-                   maxOccurs="1" minOccurs="0"></element>
+                   maxOccurs="1" minOccurs="0"/>
           <element name="colonizationAcquisition" type="tns:ColonizationAcquisition"
                    maxOccurs="unbounded" minOccurs="1" />
         </sequence>
@@ -1002,7 +1006,7 @@
       </choice>
       <choice>
         <element name="transmissionProbability" type="tns:TransmissionProbability"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
         <element name="beta" type="tns:Rate" maxOccurs="unbounded"
                  minOccurs="1" />
       </choice>
@@ -1012,8 +1016,26 @@
 
 
 
+<simpleType name="InfectiousDiseaseStageEnum">
+	<restriction base="string">
+			<enumeration value="susceptible" />
+			<enumeration value="incubating" />
+			<enumeration value="symptomatic" />
+	</restriction>
+</simpleType>
 
-  <!-- 9. CENSUS TYPES -->
+<simpleType name="AnthraxDiseaseStageVariableValuesEnum">
+	<restriction base="string">
+			<enumeration value="susceptible" />
+			<enumeration value="incubating" />
+			<enumeration value="symptomaticNotFulminant" />
+			<enumeration value="fulminant" />
+			<enumeration value="recoveredAndImmune" />
+			<enumeration value="dead" />
+	</restriction>
+</simpleType>
+
+	<!-- 11. CENSUS TYPES -->
 
   <complexType name="Census">
     <complexContent>
@@ -1270,7 +1292,7 @@
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="logisticalSystems" type="tns:LogisticalSystem"
-                   maxOccurs="unbounded" minOccurs="0"></element>
+                   maxOccurs="unbounded" minOccurs="0"/>
           <element name="referenceId" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0"/>
             <element name="templatedInfectiousDiseaseControlMeasureUrlsForSoftware"
@@ -1360,7 +1382,7 @@
   <complexType name="LogisticalSystem">
     <sequence>
       <element name="product" type="string" maxOccurs="1"
-               minOccurs="1"></element>
+               minOccurs="1"/>
       <element name="logisticalSystemNodes" type="tns:LogisticalSystemNode"
                maxOccurs="unbounded" minOccurs="1">
       </element>
@@ -1381,7 +1403,7 @@
         </element>
       </choice>
       <element name="children" type="tns:LogisticalSystemNode"
-               maxOccurs="unbounded" minOccurs="0"></element>
+               maxOccurs="unbounded" minOccurs="0"/>
     </sequence>
   </complexType>
 
@@ -1402,7 +1424,7 @@
                minOccurs="1">
       </element>
       <element name="dateTime" type="dateTime" maxOccurs="1"
-               minOccurs="1"></element>
+               minOccurs="1"/>
     </sequence>
   </complexType>
 
@@ -1417,7 +1439,7 @@
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="taxonOfTreatedIndividual" type="tns:NcbiTaxonId"
-                   maxOccurs="1" minOccurs="1"></element>
+                   maxOccurs="1" minOccurs="1"/>
           <element name="individualTreatment" type="tns:Treatment"
                    maxOccurs="1" minOccurs="1">
           </element>
@@ -2008,7 +2030,7 @@
           <element name="relapseProbability" type="tns:Probability"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="relapseInterval" type="string"></element>
+          <element name="relapseInterval" type="string"/>
         </sequence>
       </extension>
     </complexContent>
@@ -2177,7 +2199,7 @@
           <element name="populations" type="tns:Census" maxOccurs="unbounded"
                    minOccurs="1" />
           <element name="households" type="string" maxOccurs="unbounded"
-                   minOccurs="1"></element>
+                   minOccurs="1"/>
         </sequence>
       </extension>
     </complexContent>
@@ -2187,9 +2209,9 @@
 
   <complexType name="SyntheticEcosystem">
     <sequence>
-      <element name="date" type="dateTime" maxOccurs="1" minOccurs="1"></element>
+      <element name="date" type="dateTime" maxOccurs="1" minOccurs="1"/>
       <element name="location" type="tns:Location" maxOccurs="1"
-               minOccurs="1"></element>
+               minOccurs="1"/>
       <element name="populations" type="string" maxOccurs="unbounded"
                minOccurs="1" />
       <element name="schools" type="tns:SchoolFacility" maxOccurs="unbounded"
@@ -2224,7 +2246,7 @@
           <element name="numberOfBeds" type="positiveInteger"
                    maxOccurs="1" minOccurs="1" />
           <element name="fractionOfPatientsDischargedToHome" type="tns:Fraction"
-                   maxOccurs="1" minOccurs="1"></element>
+                   maxOccurs="1" minOccurs="1"/>
           <element name="dischargePaths" type="tns:DischargePathAndProbability"
                    maxOccurs="unbounded" minOccurs="0">
           </element>
@@ -2245,7 +2267,7 @@
           <element name="numberOfStudents" type="positiveInteger"
                    maxOccurs="1" minOccurs="1" />
           <element name="units" type="tns:Unit" maxOccurs="unbounded"
-                   minOccurs="1"></element>
+                   minOccurs="1"/>
         </sequence>
       </extension>
     </complexContent>
@@ -2258,7 +2280,7 @@
           <element name="capacity" type="positiveInteger" maxOccurs="1"
                    minOccurs="1" />
           <element name="units" type="tns:Unit" maxOccurs="unbounded"
-                   minOccurs="1"></element>
+                   minOccurs="1"/>
         </sequence>
       </extension>
     </complexContent>
@@ -2288,7 +2310,7 @@
   <complexType name="Household">
     <sequence>
       <element name="householdId" type="nonNegativeInteger"
-               maxOccurs="1" minOccurs="1"></element>
+               maxOccurs="1" minOccurs="1"/>
       <element name="groupQuarters" type="tns:ApolloLocationCode"
                maxOccurs="1" minOccurs="0" />
       <element name="unRelated" type="tns:ApolloLocationCode"
@@ -2365,7 +2387,7 @@
   <complexType name="MultiGeometry">
     <sequence>
       <element name="polygons" type="tns:LocationPolygon"
-               maxOccurs="unbounded" minOccurs="1"></element>
+               maxOccurs="unbounded" minOccurs="1"/>
     </sequence>
   </complexType>
 
@@ -2373,12 +2395,12 @@
     <!-- <complexContent> <extension base="tns:MultiGeometry"> -->
     <sequence>
       <element name="polygons" type="tns:LocationPolygon"
-               maxOccurs="unbounded" minOccurs="1"></element>
+               maxOccurs="unbounded" minOccurs="1"/>
       <choice>
         <element name="apolloLocationCode" type="tns:ApolloLocationCode"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
         <element name="textualDescription" type="string" maxOccurs="1"
-                 minOccurs="1"></element>
+                 minOccurs="1"/>
       </choice>
     </sequence>
     <!-- </extension> </complexContent> -->
@@ -2386,7 +2408,7 @@
 
   <complexType name="LocationPolygon">
     <sequence>
-      <element name="linearRing" type="string"></element>
+      <element name="linearRing" type="string"/>
     </sequence>
   </complexType>
 
@@ -2560,7 +2582,7 @@
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="age" type="tns:FixedDuration" maxOccurs="1"
-               minOccurs="0"></element>
+               minOccurs="0"/>
       <element name="characteristics" type="tns:Characteristic"
                maxOccurs="unbounded" minOccurs="0">
       </element>
@@ -2813,7 +2835,7 @@
                maxOccurs="unbounded" minOccurs="0">
       </element>
       <element name="placesVisitedWhileSusceptibleOrInfectious"
-               type="tns:PlaceVisited" maxOccurs="unbounded" minOccurs="0"></element>
+               type="tns:PlaceVisited" maxOccurs="unbounded" minOccurs="0"/>
       <element name="infectionAcquiredFromCaseId" type="token"
                maxOccurs="1" minOccurs="0">
       </element>
@@ -2839,6 +2861,8 @@
       <enumeration value="epidemiologicallyLinkedCase" />
       <enumeration value="fatalCase" />
       <enumeration value="alertCase" />
+			<enumeration value="autochthonousCase" />
+			<enumeration value="importedCase" />
     </restriction>
   </simpleType>
 
@@ -2859,7 +2883,7 @@
         <element name="caseCountArray" type="tns:VariableCategoryValueTree"
                  maxOccurs="1" minOccurs="1" />
         <element name="temporalCountArrayWithUniformIntervals" type="tns:TemporalCountArrayWithUniformIntervals"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
       </choice>
       <element name="referenceId" type="nonNegativeInteger"
                maxOccurs="1" minOccurs="1" />
@@ -2878,7 +2902,7 @@
         <element name="caseCountArray" type="tns:CaseCountArray"
                  maxOccurs="1" minOccurs="1" />
         <element name="temporalCountArrayWithUniformIntervals" type="tns:TemporalCountArrayWithUniformIntervals"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
       </choice>
       <element name="referenceId" type="nonNegativeInteger"
                maxOccurs="1" minOccurs="1" />
@@ -2895,7 +2919,7 @@
     <sequence>
       <element name="nDimensions" type="positiveInteger" maxOccurs="1"
                minOccurs="0" />
-      <element name="nTemporalIntervals" type="string"></element>
+      <element name="nTemporalIntervals" type="string"/>
       <element name="firstArrayAxis" type="tns:CategoricalVariableNode"
                maxOccurs="1" minOccurs="1" />
     </sequence>
@@ -2914,11 +2938,19 @@
     </sequence>
   </complexType>
 
+	<simpleType name="CaseCountArrayTypeEnum">
+		<restriction base="string">
+			<enumeration value="resetTo0" />
+			<enumeration value="resetTo0AndTurnOffDataCollection" />
+			<enumeration value="resetTo0AndTurnBackOnDataCollection" />
+		</restriction>
+	</simpleType>
+
   <complexType name="DateSpanWithNoDataCollection">
     <sequence>
       <element name="startDate" type="date" minOccurs="1"
-               maxOccurs="1"></element>
-      <element name="endDate" type="date" minOccurs="1" maxOccurs="1"></element>
+               maxOccurs="1"/>
+      <element name="endDate" type="date" minOccurs="1" maxOccurs="1"/>
     </sequence>
   </complexType>
 
@@ -2952,10 +2984,10 @@
     <sequence>
       <element name="startDate" type="date" maxOccurs="1"
                minOccurs="1" />
-      <element name="startDateDefinition" type="tns:EpidemicPeriodBoundaryDefinitionEnum"
+			<element name="startDateDefinition" type="tns:EpidemicPeriodStartDefinitionEnum"
                maxOccurs="1" minOccurs="1" />
       <element name="endDate" type="date" maxOccurs="1" minOccurs="0" />
-      <element name="endDateDefinition" type="tns:EpidemicPeriodBoundaryDefinitionEnum"
+			<element name="endDateDefinition" type="tns:EpidemicPeriodEndDefinitionEnum"
                maxOccurs="1" minOccurs="0" />
     </sequence>
   </complexType>
@@ -3003,11 +3035,11 @@
 
   <complexType name="CaseVariableAndValue">
     <sequence>
-      <element name="variable" type="string"></element>
+      <element name="variable" type="string"/>
       <element name="categoryDefinition" type="tns:CategoryDefinition"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="value" type="string"></element>
+      <element name="value" type="string"/>
     </sequence>
   </complexType>
 
@@ -3074,11 +3106,30 @@
     </sequence>
   </complexType>
 
-  <simpleType name="EpidemicPeriodBoundaryDefinitionEnum">
+	<complexType name="EditorNote">
+		<sequence>
+			<element name="id" type="nonNegativeInteger" maxOccurs="1"
+				minOccurs="1" />
+			<element name="title" type="string" maxOccurs="1" minOccurs="1" />
+			<element name="editor" type="string" maxOccurs="1" minOccurs="0" />
+			<element name="note" type="string" maxOccurs="1" minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<simpleType name="EpidemicPeriodStartDefinitionEnum">
     <restriction base="string">
       <enumeration value="symptomOnsetFirstCase" />
+			<enumeration value="firstReportedCase" />
       <enumeration value="dateOfFirstCaseFatality" />
       <enumeration value="firstLabCaseConfirmation" />
+			<enumeration value="administrativeDeclaration" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="EpidemicPeriodEndDefinitionEnum">
+		<restriction base="string">
       <enumeration value="symptomOnsetLastCase" />
       <enumeration value="hospitalizationLastCase" />
       <enumeration value="deathOfLastCase" />
@@ -3142,14 +3193,14 @@
     <sequence>
       <choice>
         <element name="textualName" type="string" maxOccurs="1"
-                 minOccurs="1"></element>
+                 minOccurs="1"/>
         <element name="loincCode" type="tns:LoincId" maxOccurs="1"
-                 minOccurs="1"></element>
+                 minOccurs="1"/>
 
       </choice>
       <element name="sampleDate" type="dateTime" maxOccurs="1"
-               minOccurs="0"></element>
-      <element name="result" type="string" maxOccurs="1" minOccurs="0"></element>
+               minOccurs="0"/>
+      <element name="result" type="string" maxOccurs="1" minOccurs="0"/>
     </sequence>
   </complexType>
 
@@ -3169,7 +3220,7 @@
                  minOccurs="1">
         </element>
         <element name="namedMultiGeometry" type="tns:NamedMultiGeometry"
-                 maxOccurs="1" minOccurs="1"></element>
+                 maxOccurs="1" minOccurs="1"/>
       </choice>
       <choice>
         <element name="frequencyOfVisits" type="tns:Rate" maxOccurs="1"
@@ -3207,7 +3258,7 @@
   <complexType name="Unit">
     <sequence>
 
-      <element name="unitId" type="string" maxOccurs="1" minOccurs="1"></element>
+      <element name="unitId" type="string" maxOccurs="1" minOccurs="1"/>
       <element name="unitType" type="tns:UnitEnum" maxOccurs="1"
                minOccurs="1">
       </element>
@@ -3255,7 +3306,7 @@
                  maxOccurs="1" minOccurs="1">
         </element>
         <element name="userInventedName" type="string" maxOccurs="1"
-                 minOccurs="1"></element>
+                 minOccurs="1"/>
       </choice>
       <element name="value" type="tns:CategoryDefinition"
                maxOccurs="1" minOccurs="1">
@@ -3320,16 +3371,17 @@
     <complexContent>
       <extension base="tns:CategoryDefinition">
         <sequence>
+					<element name="label" type="token" maxOccurs="1" minOccurs="0"/>
           <element name="unitOfTimeForLowerBound" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="lowerBound" type="nonNegativeInteger"
-                   maxOccurs="1" minOccurs="1" />
+					<element name="lowerBound" type="tns:Bound" maxOccurs="1"
+						minOccurs="1" />
           <element name="unitOfTimeForUpperBound" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="upperBound" type="nonNegativeInteger"
-                   maxOccurs="1" minOccurs="1" />
+					<element name="upperBound" type="tns:Bound" maxOccurs="1"
+						minOccurs="1" />
         </sequence>
       </extension>
     </complexContent>
@@ -3601,6 +3653,8 @@
         <element name="thingsToCount" type="string" maxOccurs="1"
                  minOccurs="1" />
       </choice>
+			<element name="eventFrequencyMeasure" type="tns:EventFrequencyEnum"
+				maxOccurs="1" minOccurs="1" />
       <element name="temporalGranularity" type="tns:TemporalGranularityEnum"
                maxOccurs="1" minOccurs="1" />
       <element name="spatialGranularity" type="tns:SpatialGranularityEnum"
@@ -3608,6 +3662,11 @@
 
       <element name="placeType" type="tns:PlaceEnum" maxOccurs="unbounded"
                minOccurs="0" />
+
+			<element name="individualControlMeasureStates" type="tns:IndividualControlMeasureStateEnum"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+
       <element name="infectionStates" type="tns:InfectionStateEnum"
                maxOccurs="unbounded" minOccurs="0">
       </element>
@@ -3621,10 +3680,32 @@
       <element name="diseaseOutcomeTransitions" type="tns:DiseaseOutcomeTransition"
                maxOccurs="unbounded" minOccurs="0">
       </element>
-      <element name="otherVariables" type="tns:VariableAndCategoryDefinition"
+			<element name="otherVariables" type="tns:VariableAndCategoryDefinitions"
                maxOccurs="unbounded" minOccurs="0" />
     </sequence>
   </complexType>
+
+
+
+	<simpleType name="IndividualControlMeasureStateEnum">
+		<restriction base="string">
+			<enumeration value="vaccinated" />
+			<enumeration value="antiViralProphylaxed" />
+			<enumeration value="quarantined" />
+			<enumeration value="vaccinatedAndAntiViralProphylaxed" />
+			<enumeration value="vaccinatedAndQuarantined" />
+			<enumeration value="antiViralProphylaxedAndQuarantined" />
+			<enumeration value="vaccinatedAndAntiViralProphylaxedAndQuarantined" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="EventFrequencyEnum">
+		<restriction base="string">
+			<enumeration value="incidence" />
+			<enumeration value="prevelance" />
+		</restriction>
+	</simpleType>
+
 
   <simpleType name="TemporalGranularityEnum">
     <restriction base="string">
@@ -3649,7 +3730,7 @@
   <complexType name="InfectionStateTransition">
     <sequence>
       <element name="apolloLabel" type="tns:InfectionStateTransitionEnum"
-               maxOccurs="1" minOccurs="0"></element>
+               maxOccurs="1" minOccurs="0"/>
       <element name="priorInfectionState" type="tns:InfectionStateEnum"
                maxOccurs="1" minOccurs="0">
       </element>
@@ -3667,7 +3748,7 @@
   <complexType name="DiseaseOutcomeTransition">
     <sequence>
       <element name="apolloLabel" type="tns:diseaseOutcomeTransitionEnum"
-               maxOccurs="1" minOccurs="0"></element>
+               maxOccurs="1" minOccurs="0"/>
       <element name="priorDiseaseOutcome" type="tns:DiseaseOutcomeEnum"
                maxOccurs="1" minOccurs="0">
       </element>
@@ -3693,7 +3774,7 @@
     </sequence>
   </complexType>
 
-  <complexType name="VariableAndCategoryDefinition">
+	<complexType name="VariableAndCategoryDefinitions">
     <sequence>
       <element name="variable" type="tns:CategoricalVariableEnum"
                maxOccurs="1" minOccurs="1" />
@@ -3747,12 +3828,12 @@
     <complexContent>
       <extension base="tns:ApolloIndexableItem">
         <sequence>
+					<element name="infectiousDiseaseScenarioWithoutIntervention"
+						type="tns:InfectiousDiseaseScenario" maxOccurs="1" minOccurs="1" />
           <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlStrategy"
                    maxOccurs="unbounded" minOccurs="0" />
           <element name="infectiousDiseaseTransmissionModelIds" type="tns:SoftwareIdentification"
                    maxOccurs="unbounded" minOccurs="1" />
-          <element name="infectiousDiseaseScenarioWithoutIntervention"
-                   type="tns:InfectiousDiseaseScenario" maxOccurs="1" minOccurs="1" />
           <element name="sensitivityAnalyses" type="tns:SensitivityAnalysisSpecification"
                    maxOccurs="unbounded" minOccurs="0" />
         </sequence>
@@ -4141,7 +4222,7 @@
     <sequence>
 
       <element name="dischargeDestination" type="string" maxOccurs="1"
-               minOccurs="1"></element>
+               minOccurs="1"/>
       <element name="probability" type="tns:Probability" maxOccurs="unbounded"
                minOccurs="1" />
     </sequence>
@@ -4236,7 +4317,7 @@
           <element name="maximumValue" type="double" maxOccurs="1"
                    minOccurs="1" />
           <element name="numberOfDiscretizations" type="integer"
-                   maxOccurs="1" minOccurs="0" />
+						maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
     </complexContent>
@@ -4274,20 +4355,62 @@
     </complexContent>
   </complexType>
 
-  <simpleType name="CaseCountArrayTypeEnum">
+	<!-- UNDER DEVELOPMENT UNDER DEVELOPMENT UNDER DEVELOPMENT -->
+	<!-- X. Types for epidemic forecast and for submitting epidemic forecast(s)
+		to a forecast competition -->
+	<!-- UNDER DEVELOPMENT -->
 
+	<complexType name="EpidemicForecast">
+		<sequence>
+			<element name="timeOfForecast" type="string" maxOccurs="1"
+				minOccurs="1">
+			</element>
+			<element name="modelIdentification" type="tns:SoftwareIdentification"
+				maxOccurs="1" minOccurs="1"/>
+			<element name="infectionBeingForecast" type="tns:Infection"
+				maxOccurs="1" minOccurs="1" />
+			<element name="epidemicOutcomeBeingForecast" type="tns:EpidemicOutcomeEnum"
+				maxOccurs="1" minOccurs="1" />
+		</sequence>
+	</complexType>
+
+
+
+	<simpleType name="EpidemicOutcomeEnum">
     <restriction base="string">
-
-      <enumeration value="mutuallyExclusiveWithConstantLengthIntervals" />
-
-      <enumeration value="mutuallyExclusiveWithVaryingLengthIntervals" />
-
-      <enumeration value="cumulativeWithoutResets" />
-
-      <enumeration value="cumulativeWithResets" />
-      <enumeration value ="inconclusive" />
+			<enumeration value="peak week of new infections" />
+			<enumeration value="start week of epidemic transmission" />
+			<enumeration value="maximum infection incidence" />
+			<enumeration value="total incidence of infections" />
+			<enumeration value="total incidence of diseaseA" />
+			<enumeration value="total incidence of diseaseB" />
+			<enumeration value="h" />
+			<enumeration value="death" />
+			<enumeration value="recovery" />
     </restriction>
 
   </simpleType>
+
+
+	<complexType name="EpidemicForecasts">
+		<sequence>
+			<element name="forecasts" type="tns:EpidemicForecast"
+				maxOccurs="1" minOccurs="1">
+			</element>
+			<element name="modelIdentification" type="tns:SoftwareIdentification"
+				maxOccurs="1" minOccurs="1"/>
+			<element name="teamName" type="string" maxOccurs="1"
+				minOccurs="1"/>
+			<element name="teamMembers" type="string" maxOccurs="1"
+				minOccurs="1"/>
+			<element name="modelDescription" type="string" maxOccurs="1"
+				minOccurs="1"/>
+			<element name="modelInputs" type="string" maxOccurs="1"
+				minOccurs="1"/>
+			<element name="NewElement" type="string" maxOccurs="1"
+				minOccurs="1"/>
+		</sequence>
+	</complexType>
+
 
 </schema>
