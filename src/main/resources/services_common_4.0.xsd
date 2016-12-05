@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services-common.apollo.pitt.edu/v3_1_0/"
-	xmlns:tns="http://services-common.apollo.pitt.edu/v3_1_0/"
-		xmlns:apollo="http://types.apollo.pitt.edu/v3_1_0/"
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services-common.apollo.pitt.edu/v4_0/"
+	xmlns:tns="http://services-common.apollo.pitt.edu/v4_0/"
+		xmlns:apollo="http://types.apollo.pitt.edu/v4_0/"
 	elementFormDefault="qualified">
 
-	<import schemaLocation="apollo_types_3.1.0.xsd" namespace="http://types.apollo.pitt.edu/v3_1_0/"></import>
+	<import schemaLocation="apollo_types_4.0.xsd" namespace="http://types.apollo.pitt.edu/v4_0/"></import>
 
 	<!-- need to add an element here for any class you want to be able to serialize with JAXB -->
 	<element name="MethodCallStatusElement" type="tns:MethodCallStatus"/>
@@ -44,6 +44,7 @@
 			<enumeration value="CONFIGURATION_FILE" />
 			<enumeration value="IMAGE" />
 			<enumeration value="MOVIE" />
+			<enumeration value="QUERY_RESULT" />
 			<enumeration value="RUN_MESSAGE" />
 		</restriction>
 	</simpleType>
@@ -53,12 +54,22 @@
 			<enumeration value="TEXT" />
 			<enumeration value="URL" />
 			<enumeration value="ZIP" />
+			<enumeration value="HDF" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="FileTypeEnum">
+		<restriction base="string">
+			<enumeration value="CSV" />
+			<enumeration value="HDF" />
 		</restriction>
 	</simpleType>
 
 	<complexType name="RunMessage">
 		<sequence>
-			<element name="authentication" type="tns:Authentication"></element>
+			<element name="softwareIdentification" type="apollo:SoftwareIdentification"></element>
+			<element name="userId" type="token" maxOccurs="1"
+				minOccurs="0" />
 		</sequence>
 	</complexType>
 
@@ -103,6 +114,22 @@
 			<element name="runIdentification" type="tns:RunIdentification">
 			</element>
 			<element name="authentication" type="tns:Authentication"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="RunStatusRequest">
+		<sequence>
+			<element name="runIdentification" type="tns:RunIdentification">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="GetRegisteredServicesResult">
+		<sequence>
+			<element name="serviceRecords" type="tns:ServiceRecord"
+							maxOccurs="unbounded" minOccurs="0">
+			</element>
+			<element name="status" type="tns:MethodCallStatus"></element>
 		</sequence>
 	</complexType>
 
@@ -157,14 +184,20 @@
 	</simpleType>
 	<complexType name="Authentication">
 		<sequence>
-			<element name="requesterId" type="token" maxOccurs="1"
+			<element name="authorizationType" type="tns:AuthorizationTypeEnum" maxOccurs="1"
 				minOccurs="1">
 			</element>
-			<element name="requesterPassword" type="token" maxOccurs="1"
+			<element name="payload" type="token" maxOccurs="1"
 				minOccurs="1" />
 		</sequence>
 	</complexType>
 
+	<simpleType name="AuthorizationTypeEnum">
+		<restriction base="string">
+			<enumeration value="JWT" />
+			<enumeration value="SSO" />
+		</restriction>
+	</simpleType>
 
 	<simpleType name="MethodCallStatusEnum">
 		<restriction base="string">
@@ -174,6 +207,7 @@
 			<enumeration value="called_translator" />
 			<enumeration value="called_visualizer" />
 			<enumeration value="called_simulator" />
+			<enumeration value="called_query_service" />
 			<enumeration value="called_data_service" />
 			<enumeration value="translating" />
 			<enumeration value="translation_completed" />
@@ -191,6 +225,9 @@
 			<enumeration value="unknown_runid" />
 			<enumeration value="run_terminated" />
 			<enumeration value="authentication_failure" />
+			<enumeration value="translating_output" />
+			<enumeration value="output_translated" />
+			<enumeration value="not_found" />
 		</restriction>
 	</simpleType>
 
