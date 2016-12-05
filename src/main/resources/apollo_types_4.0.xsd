@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v4_0/"
-	xmlns:tns="http://types.apollo.pitt.edu/v4_0/" elementFormDefault="qualified"
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v4_0_1/"
+	xmlns:tns="http://types.apollo.pitt.edu/v4_0_1/" elementFormDefault="qualified"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
 
 

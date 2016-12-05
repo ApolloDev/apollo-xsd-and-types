@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-	xmlns:tns="http://service.apollo.pitt.edu/libraryservice/v4_0/"
+	xmlns:tns="http://service.apollo.pitt.edu/libraryservice/v4_0_1/"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	name="LibraryService_v4.0" targetNamespace="http://service.apollo.pitt.edu/libraryservice/v4_0/">
+	name="LibraryService_v4.0.1" targetNamespace="http://service.apollo.pitt.edu/libraryservice/v4_0_1/">
 	<wsdl:types>
-		<xsd:schema targetNamespace="http://service.apollo.pitt.edu/libraryservice/v4_0/"
-			xmlns:lst="http://library-service-types.apollo.pitt.edu/v4_0/">
+		<xsd:schema targetNamespace="http://service.apollo.pitt.edu/libraryservice/v4_0_1/"
+			xmlns:lst="http://library-service-types.apollo.pitt.edu/v4_0_1/">
 
 			<xsd:import schemaLocation="library_service_4.0.xsd"
-				namespace="http://library-service-types.apollo.pitt.edu/v4_0/">
+				namespace="http://library-service-types.apollo.pitt.edu/v4_0_1/">
 			</xsd:import>
 
 
@@ -443,7 +443,7 @@
 		<wsdl:operation name="getLibraryItemContainer">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getLibraryItemContainer" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getLibraryItemContainer" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -456,7 +456,7 @@
 		<wsdl:operation name="addLibraryItemContainer">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/addLibraryItemContainer" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/addLibraryItemContainer" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -469,7 +469,7 @@
 		<wsdl:operation name="updateLibraryItemContainer">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/updateLibraryItemContainer" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/updateLibraryItemContainer" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -482,7 +482,7 @@
 		<wsdl:operation name="setReleaseVersionForLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/setReleaseVersionForLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/setReleaseVersionForLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -495,7 +495,7 @@
 		<wsdl:operation name="addReviewerCommentToLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/addReviewerCommentToLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/addReviewerCommentToLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -508,7 +508,7 @@
 		<wsdl:operation name="getCommentsForLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getCommentsForLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getCommentsForLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -521,7 +521,7 @@
 		<wsdl:operation name="getVersionNumbersForLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getVersionNumbersForLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getVersionNumbersForLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -534,7 +534,7 @@
 		<wsdl:operation name="getLibraryItemReleaseVersion">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getLibraryItemReleaseVersion" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getLibraryItemReleaseVersion" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -547,7 +547,7 @@
 		<wsdl:operation name="query">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/query" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/query" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -560,7 +560,7 @@
 		<wsdl:operation name="grantGroupAccessToLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/grantGroupAccessToLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/grantGroupAccessToLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -573,7 +573,7 @@
 		<wsdl:operation name="removeGroupAccessToLibraryItem">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/removeGroupAccessToLibraryItem" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/removeGroupAccessToLibraryItem" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -587,7 +587,7 @@
 		<wsdl:operation name="getLibraryItemURNs">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getLibraryItemURNs" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getLibraryItemURNs" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -600,7 +600,7 @@
 		<wsdl:operation name="getChangeLogForLibraryItemsModifiedSinceDateTime">
 
 			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0/getChangeLogForLibraryItemsModifiedSinceDateTime" />
+				soapAction="http://service.apollo.pitt.edu/libraryservice/v4_0_1/getChangeLogForLibraryItemsModifiedSinceDateTime" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
@@ -611,7 +611,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 	</wsdl:binding>
-	<wsdl:service name="LibraryService_v4.0">
+	<wsdl:service name="LibraryService_v4.0.1">
 		<wsdl:port binding="tns:LibraryServiceBinding" name="LibraryServiceEndpoint">
 			<soap:address
 				location="http://localhost:8080/libraryservice4.0/services/libraryservice" />
