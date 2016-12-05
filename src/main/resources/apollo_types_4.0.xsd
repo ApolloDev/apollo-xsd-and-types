@@ -274,7 +274,7 @@
 
   <complexType name="Interval">
     <sequence>
-			<element name="startBoundaryDefinition" type="tns:Interval"
+			<element name="startBoundaryDefinition" type="tns:IntervalBoundaryDefinitionEnum"
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="endBoundaryDefinition" type="tns:IntervalBoundaryDefinitionEnum"
@@ -751,7 +751,7 @@
 
 
   <!-- 8. INFECTION AND INFECTIOUS DISEASE -->
-  <!-- -->
+  <!-- N.B.  Move three 'l' forms (infection, contamination, infectious disease) to an 'under developent section' before release-->
 
   <complexType name="lInfection">
     <complexContent>
@@ -813,7 +813,7 @@
 
     <complexType name="lInfectiousDisease">
         <complexContent>
-            <extension base="tns:ApolloIndexableItem">
+            <extension base="tns:InfectiousDisease">
                 <sequence>
                     <element name="coosalPathogen" type="tns:ApolloPathogenCode"
                              maxOccurs="1" minOccurs="1" />
@@ -826,7 +826,7 @@
 
     <complexType name="InfectiousDisease">
         <complexContent>
-            <extension base="tns:lInfectiousDisease">
+            <extension base="tns:ApolloIndexableItem">
         <sequence>
           <element name="disease" type="tns:SnomedId" maxOccurs="1"
                    minOccurs="1" />
@@ -930,7 +930,7 @@
 		types'- -->
   <complexType name="lContamination">
     <complexContent>
-      <extension base="tns:ApolloIndexableItem">
+      <extension base="tns:Contamination">
         <sequence>
           <element name="XXX" type="tns:ApolloPathogenCode"
                    maxOccurs="1" minOccurs="1" />
@@ -942,7 +942,7 @@
 
   <complexType name="Contamination">
     <complexContent>
-      <extension base="tns:lContamination">
+      <extension base="tns:ApolloIndexableItem">
         <sequence>
           <element name="pathogen" type="tns:ApolloPathogenCode"
                    maxOccurs="1" minOccurs="1" />
