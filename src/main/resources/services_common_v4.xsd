@@ -4,7 +4,7 @@
 		xmlns:apollo="http://types.apollo.pitt.edu/v4_0_1/"
 	elementFormDefault="qualified">
 
-	<import schemaLocation="apollo_types_4.0.xsd" namespace="http://types.apollo.pitt.edu/v4_0_1/"></import>
+	<import schemaLocation="apollo_types_v4.xsd" namespace="http://types.apollo.pitt.edu/v4_0_1/"></import>
 
 	<!-- need to add an element here for any class you want to be able to serialize with JAXB -->
 	<element name="MethodCallStatusElement" type="tns:MethodCallStatus"/>

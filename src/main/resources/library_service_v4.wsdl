@@ -7,7 +7,7 @@
 		<xsd:schema targetNamespace="http://service.apollo.pitt.edu/libraryservice/v4_0_1/"
 			xmlns:lst="http://library-service-types.apollo.pitt.edu/v4_0_1/">
 
-			<xsd:import schemaLocation="library_service_4.0.xsd"
+			<xsd:import schemaLocation="library_service_v4.xsd"
 				namespace="http://library-service-types.apollo.pitt.edu/v4_0_1/">
 			</xsd:import>
 
