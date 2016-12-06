@@ -156,7 +156,7 @@
 			<!-- <soap:address location="http://synthiastage.rti.org/Account/synthia-WS.asmx" /> -->
 			<!--<soap:address location="http://localhost:8080/syntheticpopulationservice20/services/syntheticpopulationservice" />-->
 			<!-- I have no idea how to dynamically generate the absolute host address properly (use definitions...?) -->
-			<soap:address location="http://localhost:8080/syntheticpopulation-service-war-4.0-SNAPSHOT/services/syntheticpopulationservice" />
+			<soap:address location="http://localhost:8080/syntheticpopulation-service-war-4.0.1-SNAPSHOT/services/syntheticpopulationservice" />
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
