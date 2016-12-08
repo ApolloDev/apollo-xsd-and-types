@@ -2943,6 +2943,14 @@
 			<enumeration value="resetTo0" />
 			<enumeration value="resetTo0AndTurnOffDataCollection" />
 			<enumeration value="resetTo0AndTurnBackOnDataCollection" />
+			<enumeration value="mutuallyExclusiveWithConstantLengthIntervals" />
+
+			<enumeration value="mutuallyExclusiveWithVaryingLengthIntervals" />
+
+			<enumeration value="cumulativeWithoutResets" />
+
+			<enumeration value="cumulativeWithResets" />
+			<enumeration value ="inconclusive" />
 		</restriction>
 	</simpleType>
 
@@ -3135,6 +3143,7 @@
       <enumeration value="deathOfLastCase" />
       <enumeration value="administrativeDeclaration" />
       <enumeration value="lastLabCaseConfirmation" />
+      <enumeration value="FortyTwoDaysAfterLastConfirmedCaseTestedNegativeTwice" />
     </restriction>
   </simpleType>
 
