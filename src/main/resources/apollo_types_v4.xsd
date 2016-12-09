@@ -2823,7 +2823,48 @@
       </element>
     </sequence>
   </complexType>
-
+<complexType name="CaseSeries">
+		<complexContent>
+			<extension base="tns:ApolloIndexableItem">
+				<sequence>
+					<element name="speciesOfCases" type="tns:NcbiTaxonId"
+						maxOccurs="1" minOccurs="1" />
+					<element name="caseSeriesDescription" type="token"
+						maxOccurs="1" minOccurs="0" />
+					<element name="caseRecords" type="tns:CaseRecord"
+						maxOccurs="unbounded" minOccurs="1" />
+					<element name="caseDefinitions" type="tns:CaseDefinition"
+						maxOccurs="unbounded" minOccurs="0" />
+					<element name="caseSeriesStartDate" type="date" maxOccurs="1"
+						minOccurs="0" />
+					<element name="caseSeriesEndDate" type="date" maxOccurs="1"
+						minOccurs="0" />
+					<element name="location" type="tns:ApolloLocationCode"
+						maxOccurs="1" minOccurs="0" />
+					<element name="causalPathogen" type="tns:ApolloPathogenCode"
+						maxOccurs="1" minOccurs="0" />
+					<element name="curator" type="string" maxOccurs="1"
+						minOccurs="0" />
+					<element name="editHistory" type="string" maxOccurs="unbounded"
+						minOccurs="0" />
+					<element name="reviewedBy" type="string" maxOccurs="unbounded"
+						minOccurs="0" />
+					<element name="acknowledgements" type="string" maxOccurs="unbounded"
+						minOccurs="0" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="InfectionSource">
+		<sequence>
+			<element name="infectionSourceCode" type="token" maxOccurs="1"
+				minOccurs="0" />
+			<element name="infectionSourceAdditionalDescription" type="token"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="infectionSourceDate" type="dateTime"
+				maxOccurs="unbounded" minOccurs="0" />
+		</sequence>
+	</complexType>
   <complexType name="CaseRecord">
     <sequence>
       <element name="caseId" type="token" maxOccurs="1" minOccurs="1">
