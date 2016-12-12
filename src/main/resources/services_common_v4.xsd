@@ -196,6 +196,7 @@
 		<restriction base="string">
 			<enumeration value="JWT" />
 			<enumeration value="SSO" />
+			<enumeration value="JSON" />
 		</restriction>
 	</simpleType>
 
