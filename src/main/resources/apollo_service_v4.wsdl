@@ -46,7 +46,7 @@
 				namespace="http://data_service_types.apollo.pitt.edu/v4_0_1/">
                 </xsd:import>
                 
-                	<xsd:element name="getLibraryItemContainer">
+             <xsd:element name="getLibraryItemContainer">
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="getLibraryItemContainerMessage"
@@ -64,6 +64,83 @@
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
+
+			<xsd:element name="getLibraryItemContainers">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getLibraryItemContainersMessage"
+							type="lst:GetLibraryItemContainersMessage">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getLibraryItemContainersResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getLibraryItemContainersResult"
+							type="lst:GetLibraryItemContainersResult">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getCollections">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getCollectionsMessage"
+							type="lst:GetCollectionsMessage">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getCollectionsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getCollectionsResult"
+							type="lst:GetCollectionsResult">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getMembersOfCollection">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getMembersOfCollectionMessage"
+							type="lst:GetMembersOfCollectionMessage">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getMembersOfCollectionResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getMembersOfCollectionResult"
+							type="lst:GetMembersOfCollectionResult">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getCacheData">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getCacheDataMessage"
+							type="lst:GetCacheDataMessage">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getCacheDataResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getCacheDataResult"
+							type="lst:GetCacheDataResult">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
 
 			<xsd:element name="addLibraryItemContainer">
 				<xsd:complexType>
@@ -200,24 +277,6 @@
 
 						<xsd:element name="getLibraryItemReleaseVersionResult"
 							type="lst:GetReleaseVersionResult">
-						</xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="query">
-				<xsd:complexType>
-					<xsd:sequence>
-
-						<xsd:element name="queryMessage" type="lst:QueryMessage">
-						</xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="queryResponse">
-				<xsd:complexType>
-					<xsd:sequence>
-
-						<xsd:element name="queryResult" type="lst:QueryResult">
 						</xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
@@ -513,6 +572,39 @@
 	<wsdl:message name="getLibraryItemContainerResponse">
 		<wsdl:part name="parameters" element="tns:getLibraryItemContainerResponse"></wsdl:part>
 	</wsdl:message>
+
+	<wsdl:message name="getLibraryItemContainersRequest">
+
+	<wsdl:part name="parameters" element="tns:getLibraryItemContainers"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getLibraryItemContainersResponse">
+		<wsdl:part name="parameters" element="tns:getLibraryItemContainersResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="getCollectionsRequest">
+
+		<wsdl:part name="parameters" element="tns:getCollections"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getCollectionsResponse">
+		<wsdl:part name="parameters" element="tns:getCollectionsResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="getMembersOfCollectionRequest">
+
+		<wsdl:part name="parameters" element="tns:getMembersOfCollection"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getMembersOfCollectionResponse">
+		<wsdl:part name="parameters" element="tns:getMembersOfCollectionResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="getCacheDataRequest">
+
+		<wsdl:part name="parameters" element="tns:getCacheData"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getCacheDataResponse">
+		<wsdl:part name="parameters" element="tns:getCacheDataResponse"></wsdl:part>
+	</wsdl:message>
+
 	<wsdl:message name="addLibraryItemContainerRequest">
 		<wsdl:part name="parameters" element="tns:addLibraryItemContainer"></wsdl:part>
 	</wsdl:message>
@@ -557,12 +649,6 @@
 	</wsdl:message>
 	<wsdl:message name="getLibraryItemReleaseVersionResponse">
 		<wsdl:part name="parameters" element="tns:getLibraryItemReleaseVersionResponse"></wsdl:part>
-	</wsdl:message>
-	<wsdl:message name="queryRequest">
-		<wsdl:part name="parameters" element="tns:query"></wsdl:part>
-	</wsdl:message>
-	<wsdl:message name="queryResponse">
-		<wsdl:part name="parameters" element="tns:queryResponse"></wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="grantGroupAccessToLibraryItemRequest">
 		<wsdl:part name="parameters" element="tns:grantGroupAccessToLibraryItem"></wsdl:part>
@@ -674,6 +760,27 @@
 			<wsdl:input message="tns:getLibraryItemContainerRequest"></wsdl:input>
 			<wsdl:output message="tns:getLibraryItemContainerResponse"></wsdl:output>
 		</wsdl:operation>
+
+		<wsdl:operation name="getLibraryItemContainers">
+			<wsdl:input message="tns:getLibraryItemContainersRequest"></wsdl:input>
+			<wsdl:output message="tns:getLibraryItemContainersResponse"></wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getCollections">
+			<wsdl:input message="tns:getCollectionsRequest"></wsdl:input>
+			<wsdl:output message="tns:getCollectionsResponse"></wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getMembersOfCollection">
+			<wsdl:input message="tns:getMembersOfCollectionRequest"></wsdl:input>
+			<wsdl:output message="tns:getMembersOfCollectionResponse"></wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getCacheData">
+			<wsdl:input message="tns:getCacheDataRequest"></wsdl:input>
+			<wsdl:output message="tns:getCacheDataResponse"></wsdl:output>
+		</wsdl:operation>
+
 		<wsdl:operation name="getChangeLogForLibraryItemsModifiedSinceDateTime">
 			<wsdl:input
 				message="tns:getChangeLogForLibraryItemsModifiedSinceDateTimeRequest"></wsdl:input>
@@ -716,10 +823,6 @@
 		<wsdl:operation name="removeGroupAccessToLibraryItem">
 			<wsdl:input message="tns:removeGroupAccessToLibraryItemRequest"></wsdl:input>
 			<wsdl:output message="tns:removeGroupAccessToLibraryItemResponse"></wsdl:output>
-		</wsdl:operation>
-		<wsdl:operation name="query">
-			<wsdl:input message="tns:queryRequest"></wsdl:input>
-			<wsdl:output message="tns:queryResponse"></wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="setLibraryItemAsNotReleased">
 			<wsdl:input message="tns:setLibraryItemAsNotReleasedRequest"></wsdl:input>
@@ -787,6 +890,63 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
+
+		<wsdl:operation name="getLibraryItemContainers">
+
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getLibraryItemContainers" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getCollections">
+
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getCollections" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getMembersOfCollection">
+
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getMembersOfCollection" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getCacheData">
+
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getCacheData" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
 		<wsdl:operation name="addLibraryItemContainer">
 
 			<soap:operation
@@ -878,19 +1038,7 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="query">
-
-			<soap:operation
-				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/query" />
-			<wsdl:input>
-
-				<soap:body use="literal" />
-			</wsdl:input>
-			<wsdl:output>
-
-				<soap:body use="literal" />
-			</wsdl:output>
-		</wsdl:operation>
+	
 		<wsdl:operation name="grantGroupAccessToLibraryItem">
 
 			<soap:operation

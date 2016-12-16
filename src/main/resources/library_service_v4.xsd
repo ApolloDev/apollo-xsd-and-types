@@ -339,6 +339,14 @@
 		</restriction>
 	</simpleType>
 
+    <complexType name="LibraryItemContainerAndURN">
+    	<sequence>
+    		<element name="urn" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="version" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="libraryItemContainer" type="tns:LibraryItemContainer"></element>
+    	</sequence>
+    </complexType>
+
     <complexType name="SetLibraryItemAsNotReleasedMessage">
     	<sequence>
     		<element name="authentication" type="pref:Authentication"></element>
@@ -393,7 +401,7 @@
 
     <complexType name="GetCollectionsResult">
     	<sequence>
-    		<element name="collections" type="tns:LibraryCollection" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="collections" type="tns:LibraryItemContainerAndURN" minOccurs="0" maxOccurs="unbounded"></element>
     		<element name="status" type="pref:MethodCallStatus"></element>
     	</sequence>
     </complexType>
@@ -409,7 +417,7 @@
 
     <complexType name="GetMembersOfCollectionResult">
     	<sequence>
-    		<element name="members" type="tns:LibraryItemContainer" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="members" type="tns:LibraryItemContainerAndURN" minOccurs="0" maxOccurs="unbounded"></element>
     		<element name="status" type="pref:MethodCallStatus"></element>
     	</sequence>
     </complexType>
