@@ -2866,31 +2866,47 @@
 		</sequence>
 	</complexType>
   <complexType name="CaseRecord">
-    <sequence>
-      <element name="caseId" type="token" maxOccurs="1" minOccurs="1">
-      </element>
-      <element name="ageInYears" type="nonNegativeInteger"
-               maxOccurs="1" minOccurs="0">
-      </element>
-      <element name="occupations" type="tns:OccupationEnum"
-               maxOccurs="unbounded" minOccurs="0">
-      </element>
-      <element name="placesVisitedWhileSusceptibleOrInfectious"
-               type="tns:PlaceVisited" maxOccurs="unbounded" minOccurs="0"/>
-      <element name="infectionAcquiredFromCaseId" type="token"
-               maxOccurs="1" minOccurs="0">
-      </element>
-      <element name="diseaseOutcomesWithLocationDateTime" type="tns:DiseaseOutcomeWithLocationDateTime"
-               maxOccurs="unbounded" minOccurs="0">
-      </element>
-      <element name="labTestsAndResults" type="tns:LabTestAndResult"
-               maxOccurs="unbounded" minOccurs="0">
-      </element>
-      <element name="pathogenGeneSequence" type="string" maxOccurs="1"
-               minOccurs="0">
-      </element>
-    </sequence>
-  </complexType>
+		<sequence>
+			<element name="caseId" type="token" maxOccurs="1" minOccurs="1" />
+			<element name="ageInYears" type="nonNegativeInteger"
+				maxOccurs="1" minOccurs="0" />
+			<element name="sex" type="tns:GenderEnum" maxOccurs="1"
+				minOccurs="0" />
+			<element name="race" type="string" maxOccurs="unbounded"
+				minOccurs="0" />
+			<element name="occupations" type="tns:OccupationEnum"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="placesVisitedWhileSusceptibleOrInfectious"
+				type="tns:PlaceVisited" maxOccurs="unbounded" minOccurs="0" />
+			<element name="infectionAcquiredFromCaseId" type="token"
+				maxOccurs="1" minOccurs="0" />
+			<element name="diseaseOutcomesWithLocationDateTime" type="tns:DiseaseOutcomeWithLocationDateTime"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="labTestsAndResults" type="tns:LabTestAndResult"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="pathogenGeneSequence" type="string" maxOccurs="1"
+				minOccurs="0" />
+			<element name="references" type="tns:Reference" maxOccurs="unbounded"
+				minOccurs="0" />
+			<!-- New elements added for Rabies case records -->
+			<!-- New elements added for Rabies case records -->
+
+			<element name="caseClassification" type="string" maxOccurs="1"
+				minOccurs="0" />
+			<element name="location" type="tns:ApolloLocationCode"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="caseDefinition" type="tns:CaseDefinition"
+				maxOccurs="1" minOccurs="0" />
+			<element name="causalPathogen" type="tns:ApolloPathogenCode"
+				maxOccurs="1" minOccurs="0" />
+			<element name="treatment" type="tns:Treatment" maxOccurs="unbounded"
+				minOccurs="0" />
+			<element name="infectionSource" type="tns:InfectionSource"
+				maxOccurs="unbounded" minOccurs="0" />
+			<element name="controlMeasures" type="tns:InfectiousDiseaseControlMeasure"
+				maxOccurs="unbounded" minOccurs="0" />
+		</sequence>
+	</complexType>
 
   <simpleType name="CaseDefinitionEnum">
     <restriction base="string">
