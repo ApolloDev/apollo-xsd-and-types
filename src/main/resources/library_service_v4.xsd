@@ -343,6 +343,7 @@
     	<sequence>
     		<element name="urn" type="int" minOccurs="1" maxOccurs="1"></element>
     		<element name="version" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="isReleased" type="boolean" minOccurs="1" maxOccurs="1"></element>
     		<element name="libraryItemContainer" type="tns:LibraryItemContainer"></element>
     	</sequence>
     </complexType>
