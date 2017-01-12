@@ -1451,6 +1451,9 @@
           <element name="delayFromSymptomsToTreatment" type="tns:Duration"
                    maxOccurs="1" minOccurs="0">
           </element>
+          <element name="treatmentSystemLogistics" type="tns:TreatmentSystemLogistics"
+            maxOccurs="unbounded" minOccurs="1">
+          </element>
           <element name="targetPopulationsAndPrioritizations"
                    type="tns:ControlMeasureTargetPopulationsAndPrioritization"
                    maxOccurs="1" minOccurs="1" />
@@ -4477,6 +4480,30 @@
 				minOccurs="1"/>
 		</sequence>
 	</complexType>
+
+  <complexType name="TreatmentSystemLogistics">
+    <sequence>
+      <element name="description" type="string" maxOccurs="1"
+        minOccurs="0">
+      </element>
+      <element name="location" type="tns:Location" maxOccurs="1"
+        minOccurs="1">
+      </element>
+
+      <element name="supplySchedulePerDay" type="nonNegativeInteger"
+        maxOccurs="unbounded" minOccurs="0">
+      </element>
+      <element name="supplyScheduleUnits" type="tns:UnitOfMeasureEnum"
+        maxOccurs="1" minOccurs="0">
+      </element>
+      <element name="administrationCapacityPerDay" type="nonNegativeInteger"
+        maxOccurs="unbounded" minOccurs="0">
+      </element>
+      <element name="administrationCapacityUnits" type="tns:UnitOfMeasureEnum"
+        maxOccurs="1" minOccurs="0">
+      </element>
+    </sequence>
+  </complexType>
 
 
 </schema>
