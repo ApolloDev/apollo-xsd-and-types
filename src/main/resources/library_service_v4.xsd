@@ -147,7 +147,7 @@
 			<element name="authentication" type="pref:Authentication"
 				maxOccurs="1" minOccurs="1"></element>
 			<element name="urn" type="int" maxOccurs="1" minOccurs="1"></element>
-			<element name="version" type="int" maxOccurs="1" minOccurs="1"></element>
+			<element name="version" type="int" maxOccurs="1" minOccurs="0"></element>
 		</sequence>
 	</complexType>
 
@@ -348,6 +348,15 @@
     	</sequence>
     </complexType>
 
+    <complexType name="LibraryItemDisplayNameAndURN">
+    	<sequence>
+    		<element name="urn" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="version" type="int" minOccurs="1" maxOccurs="1"></element>
+    		<element name="isReleased" type="boolean" minOccurs="1" maxOccurs="1"></element>
+    		<element name="displayName" type="token"></element>
+    	</sequence>
+    </complexType>
+
     <complexType name="SetLibraryItemAsNotReleasedMessage">
     	<sequence>
     		<element name="authentication" type="pref:Authentication"></element>
@@ -392,6 +401,22 @@
     	</sequence>
     </complexType>
 
+
+    <complexType name="GetLibraryItemDisplayNamesAndURNsResult">
+    	<sequence>
+    		<element name="libraryItems" type="tns:LibraryItemDisplayNameAndURN" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="status" type="pref:MethodCallStatus"></element>
+    	</sequence>
+    </complexType>
+
+        <complexType name="GetLibraryItemDisplayNamesAndURNsMessage">
+    	<sequence>
+    		<element name="authentication" type="pref:Authentication"></element>
+    		<element name="className" type="token"></element>
+    		<element name="includeUnreleasedItems" type="boolean"></element>
+    	</sequence>
+    </complexType>
+
       <complexType name="GetCollectionsMessage">
     	<sequence>
     		<element name="authentication" type="pref:Authentication"></element>
@@ -418,8 +443,10 @@
 
     <complexType name="GetMembersOfCollectionResult">
     	<sequence>
-    		<element name="members" type="tns:LibraryItemContainerAndURN" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element name="members" type="tns:LibraryItemDisplayNameAndURN" minOccurs="0" maxOccurs="unbounded"></element>
     		<element name="status" type="pref:MethodCallStatus"></element>
     	</sequence>
     </complexType>
+
+
 </schema>

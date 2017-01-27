@@ -84,6 +84,25 @@
 				</xsd:complexType>
 			</xsd:element>
 
+			<xsd:element name="getLibraryItemNamesAndURNs">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getLibraryItemNamesAndURNsMessage"
+							type="lst:GetLibraryItemDisplayNamesAndURNsMessage">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getLibraryItemNamesAndURNsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getLibraryItemNamesAndURNsResult"
+							type="lst:GetLibraryItemDisplayNamesAndURNsResult">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
 			<xsd:element name="getCollections">
 				<xsd:complexType>
 					<xsd:sequence>
@@ -581,6 +600,14 @@
 		<wsdl:part name="parameters" element="tns:getLibraryItemContainersResponse"></wsdl:part>
 	</wsdl:message>
 
+		<wsdl:message name="getLibraryItemNamesAndURNsRequest">
+
+	<wsdl:part name="parameters" element="tns:getLibraryItemNamesAndURNs"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="getLibraryItemNamesAndURNsResponse">
+		<wsdl:part name="parameters" element="tns:getLibraryItemNamesAndURNsResponse"></wsdl:part>
+	</wsdl:message>
+
 	<wsdl:message name="getCollectionsRequest">
 
 		<wsdl:part name="parameters" element="tns:getCollections"></wsdl:part>
@@ -766,6 +793,11 @@
 			<wsdl:output message="tns:getLibraryItemContainersResponse"></wsdl:output>
 		</wsdl:operation>
 
+		<wsdl:operation name="getLibraryItemNamesAndURNs">
+			<wsdl:input message="tns:getLibraryItemNamesAndURNsRequest"></wsdl:input>
+			<wsdl:output message="tns:getLibraryItemNamesAndURNsResponse"></wsdl:output>
+		</wsdl:operation>
+
 		<wsdl:operation name="getCollections">
 			<wsdl:input message="tns:getCollectionsRequest"></wsdl:input>
 			<wsdl:output message="tns:getCollectionsResponse"></wsdl:output>
@@ -895,6 +927,20 @@
 
 			<soap:operation
 				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getLibraryItemContainers" />
+			<wsdl:input>
+
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+
+		<wsdl:operation name="getLibraryItemNamesAndURNs">
+
+			<soap:operation
+				soapAction="http://service.apollo.pitt.edu/apolloservice/v4_0_1/getLibraryItemNamesAndURNs" />
 			<wsdl:input>
 
 				<soap:body use="literal" />
