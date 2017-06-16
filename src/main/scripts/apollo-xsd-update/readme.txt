@@ -1,7 +1,7 @@
 --INSTALLING DEPENDENCIES--
 pip install -r requirements.txt
 -or-
-(WINDOWS) python -m pip install -r requirements.txt
+(WINDOWS) py -m pip install -r requirements.txt
 
 --RUNNING--
 python apollo-xsd-update.py
