@@ -10,3 +10,4 @@ target/
 **/*.idea/
 /src/main/xsd/
 .*.swp
+.DS_Store
