@@ -1,5 +1,5 @@
 XSD_TYPE_TO_APOLLO_SV_XLSX = "XSD Type and element to Apollo-SV mapping.xlsx"
-XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_type_to_apollo_sv.csv"
+XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_types_to_apollo_sv.csv"
 SHEET_NAME = "Sheet1"
 
 def excel2CSV(ExcelFile, SheetName, CSVFile):

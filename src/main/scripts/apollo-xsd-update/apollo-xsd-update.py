@@ -1,11 +1,11 @@
 import os
 import csv
 
-XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_type_to_apollo_sv.csv"
+import xsd_mappings_xlsx2csv
 
-os.system("xsd_mappings_xlsx2csv.py")
+XSD_TYPE_TO_APOLLO_SV_CSV = xsd_mappings_xlsx2csv.XSD_TYPE_TO_APOLLO_SV_CSV
 
-with open('apollo.xsd', 'r+') as xsd_file:
+with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
 	xsd = xsd_file.read()
 	
 	with open('Apollo-XSD-to-SV-Class-IRI.csv') as csv_file:
