@@ -1,9 +1,13 @@
 import os
 import csv
 
-import xsd_mappings_xlsx2csv
+import excel2csv
 
-XSD_TYPE_TO_APOLLO_SV_CSV = xsd_mappings_xlsx2csv.XSD_TYPE_TO_APOLLO_SV_CSV
+XSD_TYPE_TO_APOLLO_SV_XLSX = "XSD Type and element to Apollo-SV mapping.xlsx"
+XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_types_to_apollo_sv.csv"
+SHEET_NAME = "Sheet1"
+
+excel2csv.excel2CSV(XSD_TYPE_TO_APOLLO_SV_XLSX, SHEET_NAME, XSD_TYPE_TO_APOLLO_SV_CSV)
 
 with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
 	xsd = xsd_file.read()

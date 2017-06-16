@@ -1,7 +1,3 @@
-XSD_TYPE_TO_APOLLO_SV_XLSX = "XSD Type and element to Apollo-SV mapping.xlsx"
-XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_types_to_apollo_sv.csv"
-SHEET_NAME = "Sheet1"
-
 def excel2CSV(ExcelFile, SheetName, CSVFile):
 	import xlrd
 	import csv
@@ -16,5 +12,3 @@ def excel2CSV(ExcelFile, SheetName, CSVFile):
 				for x in worksheet.row_values(rownum)))
 
 	csvfile.close()
-	
-excel2CSV(XSD_TYPE_TO_APOLLO_SV_XLSX, SHEET_NAME, XSD_TYPE_TO_APOLLO_SV_CSV)
