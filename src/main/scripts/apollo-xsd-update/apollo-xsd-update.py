@@ -15,7 +15,10 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
     with open('Apollo-XSD-to-SV-Class-IRI.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
-            xsd_type = row['\xef\xbb\xbfXSD Type'].strip()
+            try:
+                xsd_type = row['\xef\xbb\xbfXSD Type'].strip()
+            except KeyError:
+                xsd_type = row['\ufeffXSD Type'].strip()
             apollo_sv_class = row['Apollo-SB Class IRI'].strip()
             
             type_declaration = "Type name=\"" + xsd_type + "\""
