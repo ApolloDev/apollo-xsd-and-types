@@ -13,12 +13,12 @@ MAPPINGS_XLSX = INPUT_DIR + "Apollo-XSD-to-Classes-mappings.xlsx"
 SHEETS = ["Apollo Types", "Apollo Elements"]
 
 for SHEET in SHEETS:
-    excel2csv.excel2CSV(MAPPINGS_XLSX, SHEET, SHEET + ".csv")
+    excel2csv.excel2CSV(MAPPINGS_XLSX, SHEET, INPUT_DIR + SHEET + ".csv")
 
 with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
     xsd = xsd_file.read()
     
-    with open(SHEETS[0] + '.csv') as csv_file:
+    with open(INPUT_DIR + SHEETS[0] + '.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             xsd_type = row['XSD Type'].strip()
@@ -36,7 +36,7 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
                 xsd[start_element_idx:].replace("Type name=\"" + xsd_type + "\"", 
                 "Type name=\"" + xsd_type + "\" sawsdl:modelReference=\"" + apollo_sv_class + "\""))
     
-    with open(SHEETS[1] + '.csv') as csv_file:
+    with open(INPUT_DIR + SHEETS[1] + '.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             xsd_type = row['XSD Element'].strip()
