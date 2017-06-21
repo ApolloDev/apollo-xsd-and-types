@@ -1,10 +1,13 @@
 import os
 import csv
 
-import excel2csv
+from modules import excel2csv
 
-XSD_TYPE_TO_APOLLO_SV_XLSX = "XSD Type and element to Apollo-SV mapping.xlsx"
-XSD_TYPE_TO_APOLLO_SV_CSV = "xsd_types_to_apollo_sv.csv"
+INPUT_DIR = "input_files/"
+OUTPUT_DIR = "output_versions/"
+XSD_TYPE_TO_APOLLO_SV_XLSX = INPUT_DIR + "XSD Type and element to Apollo-SV mapping.xlsx"
+XSD_TYPE_TO_APOLLO_SV_CSV = INPUT_DIR + "xsd_types_to_apollo_sv.csv"
+XSD_TO_SV_CLASS_CSV = INPUT_DIR + "Apollo-XSD-to-SV-Class-IRI.csv"
 SHEET_NAME = "Sheet1"
 
 excel2csv.excel2CSV(XSD_TYPE_TO_APOLLO_SV_XLSX, SHEET_NAME, XSD_TYPE_TO_APOLLO_SV_CSV)
@@ -12,13 +15,14 @@ excel2csv.excel2CSV(XSD_TYPE_TO_APOLLO_SV_XLSX, SHEET_NAME, XSD_TYPE_TO_APOLLO_S
 with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
     xsd = xsd_file.read()
     
-    with open('Apollo-XSD-to-SV-Class-IRI.csv') as csv_file:
+    with open(XSD_TO_SV_CLASS_CSV) as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             try:
                 xsd_type = row['\xef\xbb\xbfXSD Type'].strip()
             except KeyError:
                 xsd_type = row['\ufeffXSD Type'].strip()
+
             apollo_sv_class = row['Apollo-SB Class IRI'].strip()
             
             type_declaration = "Type name=\"" + xsd_type + "\""
@@ -51,5 +55,7 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
                 xsd[start_element_idx:].replace("element name=\"" + xsd_type + "\"", 
                 "element name=\"" + xsd_type + "\" sawsdl:modelReference=\"" + apollo_sv_class + "\""))
     
-    with open('apollo_new.xsd', 'w+') as out:
+    num_output_files = len(os.listdir(OUTPUT_DIR))
+    version = 'v%s' % (num_output_files)
+    with open('%supdated_apollo_%s.xsd' % (OUTPUT_DIR, version), 'w+') as out:
         out.write(xsd)
