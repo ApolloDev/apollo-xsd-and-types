@@ -101,7 +101,7 @@
     </restriction>
   </simpleType>
 
-  <simpleType name="Fraction" sawsdl:modelReference="http://purl.org/obo/owl/UO#UO_0000191">
+  <simpleType name="Fraction" sawsdl:modelReference="http://purl.obolibrary.org/obo/UO_0000191">
     <restriction base="double">
       <minInclusive value="0" />
       <maxInclusive value="1" />
@@ -120,7 +120,7 @@
     </restriction>
   </simpleType>
 
-  <simpleType name="Percent" sawsdl:modelReference="http://purl.org/obo/owl/UO#UO_0000190">
+  <simpleType name="Percent" sawsdl:modelReference="http://purl.obolibrary.org/obo/UO_0000190">
     <restriction base="nonNegativeInteger">
       <minInclusive value="0" />
     </restriction>
@@ -211,7 +211,7 @@
     <complexContent>
       <extension base="tns:ParameterValue">
         <sequence>
-          <element name="unitOfTime" sawsdl:modelReference="http://purl.org/obo/owl/UO#UO_0000003" type="tns:UnitOfTimeEnum"
+          <element name="unitOfTime" sawsdl:modelReference="http://purl.obolibrary.org/obo/UO_0000003" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1" />
           <element name="referenceId" sawsdl:modelReference="http://purl.obolibrary.org/obo/APOLLO_SV_00000519" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0" />
@@ -254,7 +254,7 @@
     </complexContent>
   </complexType>
 
-  <complexType name="Rate" sawsdl:modelReference="http://purl.org/obo/owl/UO#UO_0000280">
+  <complexType name="Rate" sawsdl:modelReference="http://purl.obolibrary.org/obo/UO_0000280">
     <sequence>
       <element name="numeratorUnitOfMeasure" type="tns:UnitOfMeasureEnum"
                maxOccurs="1" minOccurs="1">
@@ -3476,7 +3476,7 @@
     <complexContent>
       <extension base="tns:CategoryDefinition">
         <sequence>
-          <element name="unitOfTime" sawsdl:modelReference="http://purl.org/obo/owl/UO#UO_0000003" type="tns:UnitOfTimeEnum"
+          <element name="unitOfTime" sawsdl:modelReference="http://purl.obolibrary.org/obo/UO_0000003" type="tns:UnitOfTimeEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="timeZeroReference" type="tns:TimeScaleEnum"

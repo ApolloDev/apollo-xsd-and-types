@@ -5,24 +5,23 @@ from modules import excel2csv
 
 INPUT_DIR = "input_files/"
 OUTPUT_DIR = "output_versions/"
-XSD_TYPE_TO_APOLLO_SV_XLSX = INPUT_DIR + "XSD Type and element to Apollo-SV mapping.xlsx"
-XSD_TYPE_TO_APOLLO_SV_CSV = INPUT_DIR + "xsd_types_to_apollo_sv.csv"
-XSD_TO_SV_CLASS_CSV = INPUT_DIR + "Apollo-XSD-to-SV-Class-IRI.csv"
-SHEET_NAME = "Sheet1"
+#XSD_TYPE_TO_APOLLO_SV_XLSX = INPUT_DIR + "XSD Type and element to Apollo-SV mapping.xlsx"
+#XSD_TYPE_TO_APOLLO_SV_CSV = INPUT_DIR + "xsd_types_to_apollo_sv.csv"
+#XSD_TO_SV_CLASS_CSV = INPUT_DIR + "Apollo-XSD-to-SV-Class-IRI.csv"
+#SHEET_NAME = "Sheet1"
+MAPPINGS_XLSX = INPUT_DIR + "Apollo-XSD-to-Classes-mappings.xlsx"
+SHEETS = ["Apollo Types", "Apollo Elements"]
 
-excel2csv.excel2CSV(XSD_TYPE_TO_APOLLO_SV_XLSX, SHEET_NAME, XSD_TYPE_TO_APOLLO_SV_CSV)
+for SHEET in SHEETS:
+    excel2csv.excel2CSV(MAPPINGS_XLSX, SHEET, SHEET + ".csv")
 
 with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
     xsd = xsd_file.read()
     
-    with open(XSD_TO_SV_CLASS_CSV) as csv_file:
+    with open(SHEETS[0] + '.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
-            try:
-                xsd_type = row['\xef\xbb\xbfXSD Type'].strip()
-            except KeyError:
-                xsd_type = row['\ufeffXSD Type'].strip()
-
+            xsd_type = row['XSD Type'].strip()
             apollo_sv_class = row['Apollo-SB Class IRI'].strip()
             
             type_declaration = "Type name=\"" + xsd_type + "\""
@@ -37,7 +36,7 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
                 xsd[start_element_idx:].replace("Type name=\"" + xsd_type + "\"", 
                 "Type name=\"" + xsd_type + "\" sawsdl:modelReference=\"" + apollo_sv_class + "\""))
     
-    with open(XSD_TYPE_TO_APOLLO_SV_CSV) as csv_file:
+    with open(SHEETS[1] + '.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             xsd_type = row['XSD Element'].strip()
