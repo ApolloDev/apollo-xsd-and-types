@@ -1,6 +1,8 @@
 import os
 import csv
 
+import urllib.request
+
 from modules import excel2csv
 
 INPUT_DIR = "input_files/"
@@ -15,6 +17,16 @@ SHEETS = ["Apollo Types", "Apollo Elements"]
 for SHEET in SHEETS:
     excel2csv.excel2CSV(MAPPINGS_XLSX, SHEET, INPUT_DIR + SHEET + ".csv")
 
+class purlHTTPRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def http_error_302(self, req, fp, code, msg, headers):
+        print(fp.getcode())
+        print(fp.geturl())
+        
+        return urllib.request.HTTPRedirectHandler.http_error_302(self, req, fp, code, msg, headers)
+
+opener = urllib.request.build_opener(purlHTTPRedirectHandler)
+urllib.request.install_opener(opener)
+
 with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
     xsd = xsd_file.read()
     
@@ -23,6 +35,16 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
         for row in csv_reader:
             xsd_type = row['XSD Type'].strip()
             apollo_sv_class = row['Apollo-SB Class IRI'].strip()
+            
+            try:
+                response = urllib.request.urlopen(apollo_sv_class)
+                if response.getcode() != 200:
+                    print(response.getcode())
+                    print(apollo_sv_class)
+                
+            except urllib.error.HTTPError as http_error:
+                print(http_error.code)
+                print(apollo_sv_class)
             
             type_declaration = "Type name=\"" + xsd_type + "\""
             start_element_idx = xsd.index(type_declaration)
@@ -41,6 +63,16 @@ with open('../../resources/apollo_types_v4.xsd', 'r+') as xsd_file:
         for row in csv_reader:
             xsd_type = row['XSD Element'].strip()
             apollo_sv_class = row['Apollo-SV Class IRI'].strip()
+            
+            try:
+                response = urllib.request.urlopen(apollo_sv_class)
+                if response.getcode() != 200:
+                    print(response.getcode())
+                    print(apollo_sv_class)
+                
+            except urllib.error.HTTPError as http_error:
+                print(http_error.code)
+                print(apollo_sv_class)
             
             type_declaration = "element name=\"" + xsd_type + "\""
             start_element_idx = xsd.index(type_declaration)
