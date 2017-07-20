@@ -157,8 +157,10 @@ licenseName,software license identifier,http://purl.obolibrary.org/obo/APOLLO_SV
 administrativeLocations,major administrative subdivision,http://purl.obolibrary.org/obo/GEO_000000005,Epidemic
 unitId,measurement unit label,http://purl.obolibrary.org/obo/IAO_0000003,Unit
 modelId,disease transmission model identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000507,ModelIdAndProbability
-totalCaseCount,total disease cases,http://purl.obolibrary.org/obo/APOLLO_SV00000524,EpidemicCaseCounts
-totalFatalCaseCount,total fatal disease cases,http://purl.obolibrary.org/obo/APOLLO_SV00000525,EpidemicCaseCounts
+totalCaseCount,total disease cases,http://purl.obolibrary.org/obo/APOLLO_SV_00000569,EpidemicCaseCounts
+totalFatalCaseCount,total fatal disease cases,http://purl.obolibrary.org/obo/APOLLO_SV_00000568,EpidemicCaseCounts
 race,racial identity datum,http://purl.obolibrary.org/obo/OMRSE_00000098,CaseRecord
-employmentStatus,employment status data item,http://purl.obolibrary.org/obo/APOLLO_SV00000523,EmploymentStatusCategoryDefinition
-contaminatedAbioticThing,contaminated abiotic thing,http://purl.obolibrary.org/obo/APOLLO_SV00000522,InfectionAcquisitionFromContaminatedAbioticThing
+employmentStatus,employment status data item,http://purl.obolibrary.org/obo/APOLLO_SV_00000570,EmploymentStatusCategoryDefinition
+contaminatedAbioticThing,contaminated abiotic thing,http://purl.obolibrary.org/obo/APOLLO_SV_00000571,InfectionAcquisitionFromContaminatedAbioticThing
+apolloLocationCode,apollo location code,http://purl.obolibrary.org/obo/APOLLO_SV_00000259,
+locationDefinition,location definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000377,
