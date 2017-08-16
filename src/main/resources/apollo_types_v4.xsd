@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v4_0_1/"
-	xmlns:tns="http://types.apollo.pitt.edu/v4_0_1/" elementFormDefault="qualified"
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://types.apollo.pitt.edu/v4_0_2/"
+	xmlns:tns="http://types.apollo.pitt.edu/v4_0_2/" elementFormDefault="qualified"
 	xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
 
 
@@ -60,9 +60,7 @@
                    maxOccurs="unbounded" minOccurs="0">
           </element>
           <element name="infectiousDiseaseControlStrategies" type="tns:InfectiousDiseaseControlMeasure"
-                   maxOccurs="unbounded" minOccurs="0" />
-          <element name="scenarioCartesianOrigin" type="tns:ScenarioCartesianOrigin"
-                   maxOccurs="1" minOccurs="0">
+                   maxOccurs="unbounded" minOccurs="0">
           </element>
           <element name="nonApolloParameters" type="tns:NonApolloParameter"
                    maxOccurs="unbounded" minOccurs="0">
@@ -74,17 +72,9 @@
 
   <complexType name="Location">
     <sequence>
-      <choice>
         <element name="apolloLocationCode" type="tns:ApolloLocationCode"
                  maxOccurs="1" minOccurs="1">
         </element>
-        <element name="locationDefinition" type="tns:LocationDefinition"
-                 maxOccurs="1" minOccurs="1">
-        </element>
-        <element name="cartesianCircleLocationDefinition" type="tns:CartesianCircleLocationDefinition"
-                 maxOccurs="1" minOccurs="1">
-        </element>
-      </choice>
       <element name="textualDescription" type="string" maxOccurs="1"
                minOccurs="0" />
     </sequence>
@@ -2758,42 +2748,7 @@
     </restriction>
   </simpleType>
 
-
-
-
-
-  <!-- CLARA specific location types -->
-  <complexType name="CartesianCircleLocationDefinition">
-    <sequence>
-      <element name="eastWestOffsetFromCartesianCenter" type="tns:Distance"
-               maxOccurs="1" minOccurs="1" />
-      <element name="northSouthOffsetFromCartesianCenter" type="tns:Distance"
-               maxOccurs="1" minOccurs="1" />
-      <element name="altitudeRelativeToCartesianCenter" type="tns:Distance"
-               maxOccurs="1" minOccurs="1" />
-      <element name="radius" type="tns:Distance" maxOccurs="1"
-               minOccurs="1" />
-    </sequence>
-  </complexType>
-
-
-  <complexType name="ScenarioCartesianOrigin">
-    <sequence>
-      <element name="cartesianReferenceLongitude" type="tns:Longitude"
-               maxOccurs="1" minOccurs="1" />
-      <element name="cartesianReferenceLatitude" type="tns:Latitude"
-               maxOccurs="1" minOccurs="1" />
-      <element name="cartesianReferenceAltitude" type="tns:Distance"
-               maxOccurs="1" minOccurs="1" />
-    </sequence>
-  </complexType>
-
-
-
-
   <!-- X. Apollo Library types -->
-
-
 
   <complexType name="CaseDefinition">
     <complexContent>
