@@ -53,6 +53,13 @@
             <version>1.9.12</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>provided</scope>
+        </dependency>
+
 
         <dependency>
             <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -194,6 +201,12 @@
                         <groupId>org.codehaus.jackson</groupId>
                         <artifactId>jackson-core-asl</artifactId>
                         <version>1.9.12</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>1.16.16</version>
+
                     </dependency>
                 </dependencies>
                 <executions>
