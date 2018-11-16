@@ -226,7 +226,7 @@
     <complexContent>
       <extension base="tns:Duration">
         <sequence>
-          <element name="value" type="tns:NonNegativeDouble"
+          <element name="value" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -362,11 +362,11 @@
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
           <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
-          <element name="standardDeviation" type="tns:NonNegativeDouble"
+          <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="shiftRight" type="tns:NonNegativeDouble"
+          <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="cutTailAt" type="tns:PositiveDouble"
+          <element name="cutTailAt" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
         </sequence>
       </extension>
@@ -378,11 +378,11 @@
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
           <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
-          <element name="standardDeviation" type="tns:NonNegativeDouble"
+          <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="shiftRight" type="tns:NonNegativeDouble"
+          <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="cutTailAt" type="tns:PositiveDouble"
+          <element name="cutTailAt" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
         </sequence>
       </extension>
@@ -393,13 +393,13 @@
     <complexContent>
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
-          <element name="k-shape" type="tns:PositiveDouble"
+          <element name="k-shape" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="theta-scale" type="tns:PositiveDouble"
+          <element name="theta-scale" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="shiftRight" type="tns:NonNegativeDouble"
+          <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="cutTailAt" type="tns:PositiveDouble"
+          <element name="cutTailAt" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -410,13 +410,13 @@
     <complexContent>
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
-          <element name="k-shape" type="tns:PositiveDouble"
+          <element name="k-shape" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="lambda-scale" type="tns:PositiveDouble"
+          <element name="lambda-scale" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="shiftRight" type="tns:NonNegativeDouble"
+          <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="cutTailAt" type="tns:PositiveDouble"
+          <element name="cutTailAt" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -461,7 +461,7 @@
                    minOccurs="1" />
           <element name="upperBound" type="double" maxOccurs="1"
                    minOccurs="1" />
-          <element name="confidence" type="tns:Percent" maxOccurs="1"
+          <element name="confidence" type="tns:Percent" nillable="true" maxOccurs="1"
                    minOccurs="1">
           </element>
           <element name="sampleSize" type="nonNegativeInteger"
@@ -477,7 +477,7 @@
       <extension base="tns:UncertainValue">
         <sequence>
           <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
-          <element name="standardDeviation" type="tns:NonNegativeDouble"
+          <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="sampleSize" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0">
@@ -675,9 +675,9 @@
         <sequence>
           <element name="description" type="string" maxOccurs="1"
                    minOccurs="0" />
-          <element name="omega" type="tns:NonNegativeDouble"
+          <element name="omega" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="sigma" type="tns:NonNegativeDouble"
+          <element name="sigma" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -711,11 +711,11 @@
                    maxOccurs="1" minOccurs="0" />
           <element name="migrationSpeed" type="tns:Rate" maxOccurs="1"
                    minOccurs="0" />
-          <element name="shadeAffinity" type="tns:Fraction"
+          <element name="shadeAffinity" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
           <element name="maleMatingRadius" type="tns:Distance"
                    maxOccurs="1" minOccurs="0" />
-          <element name="matingProbability" type="tns:Probability"
+          <element name="matingProbability" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="0" />
           <element name="straightTravelAfterOviposit" type="tns:Distance"
                    maxOccurs="1" minOccurs="0" />
@@ -731,7 +731,7 @@
           <element name="speedOfMovement" type="tns:Rate" maxOccurs="1"
                    minOccurs="0">
           </element>
-          <element name="buildingAffinity" type="tns:Fraction"
+          <element name="buildingAffinity" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0">
           </element>
         </sequence>
@@ -901,7 +901,7 @@
   <complexType name="ReproductionNumber">
     <sequence>
       <choice>
-        <element name="exactValue" type="tns:NonNegativeDouble"
+        <element name="exactValue" type="tns:NonNegativeDouble" nillable="true"
                  maxOccurs="1" minOccurs="1">
         </element>
         <element name="uncertainValue" type="tns:UncertainValue"
@@ -1112,7 +1112,7 @@
                  maxOccurs="1" minOccurs="1">
         </element>
       </choice>
-      <element name="fractionInState" type="tns:Fraction"
+      <element name="fractionInState" type="tns:Fraction" nillable="true"
                maxOccurs="1" minOccurs="1" />
     </sequence>
   </complexType>
@@ -1182,7 +1182,7 @@
       <element name="treatmentState" type="tns:TreatmentStateEnum"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="fractionInTreatmentState" type="tns:Fraction"
+      <element name="fractionInTreatmentState" type="tns:Fraction" nillable="true"
                maxOccurs="1" minOccurs="1" />
     </sequence>
   </complexType>
@@ -1216,7 +1216,7 @@
     <complexContent>
       <extension base="tns:CensusData">
         <sequence>
-          <element name="fractionContaminated" type="tns:Fraction"
+          <element name="fractionContaminated" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="exceptionSublocations" type="tns:ContaminatedThingCensusData"
@@ -1244,14 +1244,14 @@
         <sequence>
           <element name="breteauIndex" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0" />
-          <element name="carryingCapacityPerHouse" type="tns:NonNegativeDouble"
+          <element name="carryingCapacityPerHouse" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
           <element name="heterogenousCarryingCapacity" type="boolean"
                    maxOccurs="1" minOccurs="0" />
-          <element name="ratioOfOutdoorToIndoorOvisites" type="tns:NonNegativeDouble"
+          <element name="ratioOfOutdoorToIndoorOvisites" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0" />
           <element name="maximumRatioOfOutdoorCarryingCapacityToIndoor"
-                   type="tns:NonNegativeDouble" maxOccurs="1" minOccurs="0" />
+                   type="tns:NonNegativeDouble" nillable="true" maxOccurs="1" minOccurs="0" />
         </sequence>
       </extension>
     </complexContent>
@@ -1498,7 +1498,7 @@
       <element name="simulatorReferencablePopulation" type="tns:TargetPopulationDefinition"
                maxOccurs="1" minOccurs="0" />
       <element name="fractionOfSimulatorReferencablePopulation"
-               type="tns:Fraction" maxOccurs="1" minOccurs="0" />
+               type="tns:Fraction" nillable="true" maxOccurs="1" minOccurs="0" />
     </sequence>
   </complexType>
 
@@ -1632,7 +1632,7 @@
     <complexContent>
       <extension base="tns:TreatmentEfficacy">
         <sequence>
-          <element name="averageVaccinationEfficacy" type="tns:Probability"
+          <element name="averageVaccinationEfficacy" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="vaccinationEfficacyConditionedOnAgeRange"
                    type="tns:ConditionalProbabilityDistribution" maxOccurs="1"
@@ -1653,7 +1653,7 @@
       <element name="timeIntervalLabelDefinitions" type="tns:TimeAxisCategoryLabels"
                maxOccurs="unbounded" minOccurs="1" />
       <element name="vaccinationEfficacyConditionedOnTimeSinceMostRecentDose"
-               type="tns:Probability" maxOccurs="unbounded" minOccurs="1" />
+               type="tns:Probability" nillable="true" maxOccurs="unbounded" minOccurs="1" />
     </sequence>
   </complexType>
 
@@ -1711,7 +1711,7 @@
     <complexContent>
       <extension base="tns:TreatmentEfficacy">
         <sequence>
-          <element name="efficacy" type="tns:Probability" maxOccurs="1"
+          <element name="efficacy" type="tns:Probability" nillable="true" maxOccurs="1"
                    minOccurs="1" />
         </sequence>
       </extension>
@@ -1722,7 +1722,7 @@
     <complexContent>
       <extension base="tns:TreatmentEfficacy">
         <sequence>
-          <element name="averageDrugEfficacy" type="tns:Probability"
+          <element name="averageDrugEfficacy" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="drugEfficacyConditionedOnAgeRange" type="tns:ConditionalProbabilityDistribution"
                    maxOccurs="1" minOccurs="0" />
@@ -1772,7 +1772,7 @@
                  maxOccurs="1" minOccurs="1">
         </element>
       </choice>
-      <element name="fractionOfTargetPopulationToPrioritize" type="tns:Fraction"
+      <element name="fractionOfTargetPopulationToPrioritize" type="tns:Fraction" nillable="true"
                maxOccurs="1" minOccurs="1" />
       <element name="priority" type="nonNegativeInteger" maxOccurs="1"
                minOccurs="1">
@@ -1835,10 +1835,10 @@
           <element name="closurePeriod" type="tns:Duration"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="householdTransmissionMultiplier" type="tns:NonNegativeDouble"
+          <element name="householdTransmissionMultiplier" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0">
           </element>
-          <element name="communityTransmissionMultiplier" type="tns:NonNegativeDouble"
+          <element name="communityTransmissionMultiplier" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="0">
           </element>
         </sequence>
@@ -1856,13 +1856,13 @@
           </element>
           <element name="compliance" type="tns:ProbabilisticParameter"
                    maxOccurs="1" minOccurs="1" />
-          <element name="householdTransmissionMultiplier" type="tns:NonNegativeDouble"
+          <element name="householdTransmissionMultiplier" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="schoolTransmissionMultiplier" type="tns:NonNegativeDouble"
+          <element name="schoolTransmissionMultiplier" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="workplaceTransmissionMultiplier" type="tns:NonNegativeDouble"
+          <element name="workplaceTransmissionMultiplier" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
         </sequence>
@@ -1894,10 +1894,10 @@
     <complexContent>
       <extension base="tns:InfectiousDiseaseControlMeasure">
         <sequence>
-          <element name="probabilityEntryDenied" type="tns:Probability"
+          <element name="probabilityEntryDenied" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="probabilityExitDenied" type="tns:Probability"
+          <element name="probabilityExitDenied" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
         </sequence>
@@ -1922,7 +1922,7 @@
         <sequence>
           <element name="netHolingRate" type="tns:Rate" maxOccurs="1"
                    minOccurs="1" />
-          <element name="nightlyProbabilityOfUse" type="tns:Probability"
+          <element name="nightlyProbabilityOfUse" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="insecticideEfficacyDecayRate" type="tns:Rate"
@@ -1946,24 +1946,24 @@
                    maxOccurs="1" minOccurs="0" />
           <element name="wolbachiaReleaseSites" type="tns:WolbachiaReleaseSiteEnum"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnEggMortalityRate" type="tns:Fraction"
+          <element name="wolbachiaEffectOnEggMortalityRate" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnAdultMortalityRate" type="tns:Fraction"
+          <element name="wolbachiaEffectOnAdultMortalityRate" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnLarvalMortalityRate" type="tns:Fraction"
+          <element name="wolbachiaEffectOnLarvalMortalityRate" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnFecundity" type="tns:Fraction"
+          <element name="wolbachiaEffectOnFecundity" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnMatingProbability" type="tns:Fraction"
+          <element name="wolbachiaEffectOnMatingProbability" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnLeakageRate" type="tns:Fraction"
+          <element name="wolbachiaEffectOnLeakageRate" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
-          <element name="wolbachiaEffectOnVectorialCapacity" type="tns:Fraction"
+          <element name="wolbachiaEffectOnVectorialCapacity" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="0" />
           <element name="wolbachiaPreReleaseAdultSuppressionEfficacy"
-                   type="tns:Fraction" maxOccurs="1" minOccurs="0" />
+                   type="tns:Fraction" nillable="true" maxOccurs="1" minOccurs="0" />
           <element name="wolbachiaPreReleaseLarvalSuppressionEfficacy"
-                   type="tns:Fraction" maxOccurs="1" minOccurs="0" />
+                   type="tns:Fraction" nillable="true" maxOccurs="1" minOccurs="0" />
         </sequence>
       </extension>
     </complexContent>
@@ -1994,7 +1994,7 @@
         <sequence>
           <element name="coverRadius" type="tns:Distance" maxOccurs="1"
                    minOccurs="0" />
-          <element name="fractionOfVectorIndividualsAffected" type="tns:Fraction"
+          <element name="fractionOfVectorIndividualsAffected" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -2007,9 +2007,9 @@
         <sequence>
           <element name="coverRadius" type="tns:Distance" maxOccurs="1"
                    minOccurs="1" />
-          <element name="fractionReductionOfEggs" type="tns:Fraction"
+          <element name="fractionReductionOfEggs" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="1" />
-          <element name="fractionReductionOfLarvae" type="tns:Fraction"
+          <element name="fractionReductionOfLarvae" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -2020,7 +2020,7 @@
     <complexContent>
       <extension base="tns:IndividualTreatmentControlMeasure">
         <sequence>
-          <element name="relapseProbability" type="tns:Probability"
+          <element name="relapseProbability" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="relapseInterval" type="string"/>
@@ -2033,7 +2033,7 @@
     <complexContent>
       <extension base="tns:InfectiousDiseaseControlMeasure">
         <sequence>
-          <element name="maximumTravelDistanceInKm" type="tns:NonNegativeDouble"
+          <element name="maximumTravelDistanceInKm" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="compliance" type="tns:ProbabilisticParameter"
@@ -2060,10 +2060,10 @@
       <element name="caseDefinition" type="tns:DiseaseOutcomeEnum"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="sensitivityOfCaseDetection" type="tns:Probability"
+      <element name="sensitivityOfCaseDetection" type="tns:Probability" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="specificityOfCaseDetection" type="tns:Probability"
+      <element name="specificityOfCaseDetection" type="tns:Probability" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="timeDelayOfCaseDetection" type="tns:Duration"
@@ -2080,10 +2080,10 @@
       <element name="treatment" type="tns:IndividualTreatmentEnum"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="sensitivityOfTreatmentDetection" type="tns:Probability"
+      <element name="sensitivityOfTreatmentDetection" type="tns:Probability" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="specificityOfTreatmentDetection" type="tns:Probability"
+      <element name="specificityOfTreatmentDetection" type="tns:Probability" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="timeDelayOfTreatmentDetection" type="tns:Duration"
@@ -2147,7 +2147,7 @@
       <extension base="tns:ParameterValue">
         <sequence>
           <choice>
-            <element name="probability" type="tns:Probability"
+            <element name="probability" type="tns:Probability" nillable="true"
                      maxOccurs="1" minOccurs="1" />
             <element name="probabilityDistribution" type="tns:ProbabilityDistribution"
                      maxOccurs="1" minOccurs="1" />
@@ -2238,7 +2238,7 @@
         <sequence>
           <element name="numberOfBeds" type="positiveInteger"
                    maxOccurs="1" minOccurs="1" />
-          <element name="fractionOfPatientsDischargedToHome" type="tns:Fraction"
+          <element name="fractionOfPatientsDischargedToHome" type="tns:Fraction" nillable="true"
                    maxOccurs="1" minOccurs="1"/>
           <element name="dischargePaths" type="tns:DischargePathAndProbability"
                    maxOccurs="unbounded" minOccurs="0">
@@ -2728,7 +2728,7 @@
       <element name="contactDefinitionText" type="token" maxOccurs="1"
                minOccurs="0">
       </element>
-      <element name="probability" type="tns:Probability" maxOccurs="1"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1">
       </element>
     </sequence>
@@ -3183,7 +3183,7 @@
     <complexContent>
       <extension base="tns:CountType">
         <sequence>
-          <element name="double" type="tns:NonNegativeDouble"
+          <element name="double" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
         </sequence>
       </extension>
@@ -3277,7 +3277,7 @@
       <element name="readmissionDelayInDays" type="tns:Duration"
                maxOccurs="1" minOccurs="0">
       </element>
-      <element name="probability" type="tns:Probability" maxOccurs="1"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1">
       </element>
     </sequence>
@@ -3951,7 +3951,7 @@
     <sequence>
       <element name="modelId" type="string" maxOccurs="1"
                minOccurs="1" />
-      <element name="probability" type="tns:Probability" maxOccurs="1"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1" />
     </sequence>
   </complexType>
@@ -4035,9 +4035,9 @@
       <element name="axisDefinitions" type="tns:ArrayDimensionsDefinition"
                maxOccurs="1" minOccurs="1" />
       <choice>
-        <element name="pointProbabilities" type="tns:Probability"
+        <element name="pointProbabilities" type="tns:Probability" nillable="true"
                  maxOccurs="unbounded" minOccurs="1" />
-        <element name="parametricDistribution" type="tns:Probability"
+        <element name="parametricDistribution" type="tns:Probability" nillable="true"
                  maxOccurs="unbounded" minOccurs="1" />
       </choice>
     </sequence>
@@ -4065,7 +4065,7 @@
   <complexType name="ProbabilityValuePair">
     <sequence>
       <element name="value" type="double" maxOccurs="1" minOccurs="1" />
-      <element name="probability" type="tns:Probability" maxOccurs="1"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1" />
     </sequence>
   </complexType>
@@ -4108,7 +4108,7 @@
       <element name="vacc_inf" type="tns:ProbabilisticParameter"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="relative_inf_symptomatic_multiplier" type="tns:NonNegativeDouble"
+      <element name="relative_inf_symptomatic_multiplier" type="tns:NonNegativeDouble" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
     </sequence>
@@ -4120,12 +4120,12 @@
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="probSymptomaticInfectionClinicallyDetected"
-               type="tns:Probability" maxOccurs="1" minOccurs="1">
+               type="tns:Probability" nillable="true" maxOccurs="1" minOccurs="1">
       </element>
-      <element name="symptomaticInfectionMultiplier" type="tns:PositiveDouble"
+      <element name="symptomaticInfectionMultiplier" type="tns:PositiveDouble" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
-      <element name="probSevereInfectionClinicallyDetected" type="tns:Probability"
+      <element name="probSevereInfectionClinicallyDetected" type="tns:Probability" nillable="true"
                maxOccurs="1" minOccurs="1">
       </element>
     </sequence>
@@ -4171,10 +4171,10 @@
           <element name="r_community" type="tns:Rate" maxOccurs="1"
                    minOccurs="1">
           </element>
-          <element name="c_community" type="tns:PositiveDouble"
+          <element name="c_community" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="q_community" type="tns:PositiveDouble"
+          <element name="q_community" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
         </sequence>
@@ -4189,10 +4189,10 @@
           <element name="r_household" type="tns:Rate" maxOccurs="1"
                    minOccurs="1">
           </element>
-          <element name="c_household" type="tns:PositiveDouble"
+          <element name="c_household" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="q_household" type="tns:PositiveDouble"
+          <element name="q_household" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
         </sequence>
@@ -4213,19 +4213,19 @@
           <element name="P_Pn_group" type="tns:WithinGroupTransmissionProbability"
                    maxOccurs="unbounded" minOccurs="0">
           </element>
-          <element name="probSymptomaticIndividualAbsent" type="tns:Probability"
+          <element name="probSymptomaticIndividualAbsent" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="symptomaticAbsenteeMultiplier" type="tns:PositiveDouble"
+          <element name="symptomaticAbsenteeMultiplier" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="probSeverelyInfectedIndividualAbsent" type="tns:Probability"
+          <element name="probSeverelyInfectedIndividualAbsent" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="severelyInfectedAbsenteeMultiplier" type="tns:PositiveDouble"
+          <element name="severelyInfectedAbsenteeMultiplier" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="q_social" type="tns:PositiveDouble"
+          <element name="q_social" type="tns:PositiveDouble" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
         </sequence>
@@ -4238,7 +4238,7 @@
       <element name="groupType" type="token" maxOccurs="1"
                minOccurs="1">
       </element>
-      <element name="probability" type="tns:Probability" maxOccurs="1"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1">
       </element>
     </sequence>
@@ -4251,7 +4251,7 @@
 
       <element name="dischargeDestination" type="string" maxOccurs="1"
                minOccurs="1"/>
-      <element name="probability" type="tns:Probability" maxOccurs="unbounded"
+      <element name="probability" type="tns:Probability" nillable="true" maxOccurs="unbounded"
                minOccurs="1" />
     </sequence>
   </complexType>
@@ -4262,7 +4262,7 @@
         <sequence>
           <element name="receivingDestination" type="tns:PlaceEnum"
                    maxOccurs="1" minOccurs="1" />
-          <element name="probability" type="tns:Probability"
+          <element name="probability" type="tns:Probability" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="transitTime" type="tns:Duration" maxOccurs="1"
                    minOccurs="0" />
@@ -4285,7 +4285,7 @@
       <element name="unitOfTimeForSimulatorTimeStep" type="tns:UnitOfTimeEnum"
                maxOccurs="1" minOccurs="1" />
       <element name="numberOfUnitsOfTimeInOneSimulatorTimeStep"
-               maxOccurs="1" minOccurs="1" type="tns:PositiveDouble" />
+               maxOccurs="1" minOccurs="1" type="tns:PositiveDouble" nillable="true" />
       <element name="runLength" type="positiveInteger" maxOccurs="1"
                minOccurs="1" />
     </sequence>
@@ -4293,9 +4293,9 @@
 
   <complexType name="LatLongPair">
     <sequence>
-      <element name="latitutde" type="tns:Latitude" minOccurs="1"
+      <element name="latitutde" type="tns:Latitude" nillable="true" minOccurs="1"
                maxOccurs="1" />
-      <element name="longitude" type="tns:Longitude" minOccurs="1"
+      <element name="longitude" type="tns:Longitude" nillable="true" minOccurs="1"
                maxOccurs="1" />
     </sequence>
   </complexType>
