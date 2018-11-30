@@ -1038,7 +1038,7 @@
                    minOccurs="1">
           </element>
           <element name="simulatorTime" type="int" maxOccurs="1"
-                   minOccurs="1">
+                   minOccurs="1" nillable="true">
           </element>
           <element name="referenceDate" type="dateTime" maxOccurs="1"
                    minOccurs="0">
@@ -1319,7 +1319,7 @@
           <element name="reactiveControlMeasureTest" type="token"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="reactiveControlMeasureThreshold" type="int"
+          <element name="reactiveControlMeasureThreshold" type="int" nillable="true"
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="unitOfMeasureForThreshold" type="tns:UnitOfMeasureEnum"
