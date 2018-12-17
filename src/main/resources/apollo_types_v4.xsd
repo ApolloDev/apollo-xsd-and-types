@@ -3055,7 +3055,7 @@
                maxOccurs="1" minOccurs="1" />
       <element name="controlCountArray" type="tns:VariableCategoryValueTree"
                maxOccurs="1" minOccurs="1" />
-      <element name="referenceId" type="tns:Reference" maxOccurs="1"
+      <element name="referenceId" type="nonNegativeInteger" maxOccurs="1"
                minOccurs="0" />
     </sequence>
   </complexType>
