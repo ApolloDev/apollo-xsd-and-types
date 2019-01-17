@@ -878,10 +878,10 @@
       <element name="infectedHost" type="tns:NcbiTaxonId"
                maxOccurs="1" minOccurs="1" />
       <element name="latentPeriodDuration" type="tns:Duration"
-               maxOccurs="1" minOccurs="1">
+               maxOccurs="1" minOccurs="0">
       </element>
       <element name="infectiousPeriodDuration" type="tns:Duration"
-               maxOccurs="1" minOccurs="1">
+               maxOccurs="1" minOccurs="0">
       </element>
       <choice>
         <element name="basicReproductionNumbers" type="tns:ReproductionNumber"
@@ -1271,15 +1271,15 @@
                    minOccurs="0">
           </element>
           <element name="controlMeasureStartTime" type="tns:TriggerDefinition"
-                   maxOccurs="unbounded" minOccurs="1" />
+                   maxOccurs="unbounded" minOccurs="0" />
           <element name="controlMeasureStopTime" type="tns:TriggerDefinition"
                    maxOccurs="unbounded" minOccurs="0">
           </element>
           <element name="controlMeasureResponseDelay" type="tns:Duration"
-                   maxOccurs="1" minOccurs="1" />
+                   maxOccurs="1" minOccurs="0" />
 
           <element name="controlMeasureStandDownDelay" type="tns:Duration"
-                   maxOccurs="1" minOccurs="1">
+                   maxOccurs="1" minOccurs="0">
           </element>
           <element name="logisticalSystems" type="tns:LogisticalSystem"
                    maxOccurs="unbounded" minOccurs="0"/>
