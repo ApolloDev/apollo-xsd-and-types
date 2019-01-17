@@ -181,7 +181,7 @@
           <element name="unitOfDistance" type="tns:UnitOfDistanceEnum"
                    maxOccurs="1" minOccurs="1">
           </element>
-          <element name="value" type="double" maxOccurs="1"
+          <element name="value" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1">
           </element>
         </sequence>
@@ -361,7 +361,7 @@
     <complexContent>
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
-          <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
+          <element name="mean" type="double" nillable="true" maxOccurs="1" minOccurs="1" />
           <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
@@ -377,7 +377,7 @@
     <complexContent>
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
-          <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
+          <element name="mean" type="double" nillable="true" maxOccurs="1" minOccurs="1" />
           <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="shiftRight" type="tns:NonNegativeDouble" nillable="true"
@@ -427,9 +427,9 @@
     <complexContent>
       <extension base="tns:ContinuousParametricProbabilityDistribution">
         <sequence>
-          <element name="minimumValue" type="double" maxOccurs="1"
+          <element name="minimumValue" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
-          <element name="maximumValue" type="double" maxOccurs="1"
+          <element name="maximumValue" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
         </sequence>
       </extension>
@@ -456,10 +456,10 @@
     <complexContent>
       <extension base="tns:UncertainValue">
         <sequence>
-          <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
-          <element name="lowerBound" type="double" maxOccurs="1"
+          <element name="mean" type="double" nillable="true" maxOccurs="1" minOccurs="1" />
+          <element name="lowerBound" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
-          <element name="upperBound" type="double" maxOccurs="1"
+          <element name="upperBound" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
           <element name="confidence" type="tns:Percent" nillable="true" maxOccurs="1"
                    minOccurs="1">
@@ -476,7 +476,7 @@
     <complexContent>
       <extension base="tns:UncertainValue">
         <sequence>
-          <element name="mean" type="double" maxOccurs="1" minOccurs="1" />
+          <element name="mean" type="double" nillable="true" maxOccurs="1" minOccurs="1" />
           <element name="standardDeviation" type="tns:NonNegativeDouble" nillable="true"
                    maxOccurs="1" minOccurs="1" />
           <element name="sampleSize" type="nonNegativeInteger"
@@ -491,12 +491,12 @@
     <complexContent>
       <extension base="tns:UncertainValue">
         <sequence>
-          <element name="mean" type="double" maxOccurs="1" minOccurs="0" />
-          <element name="median" type="double" maxOccurs="1"
+          <element name="mean" type="double" nillable="true" maxOccurs="1" minOccurs="0" />
+          <element name="median" type="double" nillable="true" maxOccurs="1"
                    minOccurs="0" />
-          <element name="minimumValue" type="double" maxOccurs="1"
+          <element name="minimumValue" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
-          <element name="maximumValue" type="double" maxOccurs="1"
+          <element name="maximumValue" type="double" nillable="true" maxOccurs="1"
                    minOccurs="1" />
           <element name="sampleSize" type="nonNegativeInteger"
                    maxOccurs="1" minOccurs="0">
@@ -3643,7 +3643,7 @@
   <complexType name="Bound">
     <sequence>
       <choice>
-        <element name="finiteBoundary" type="double" maxOccurs="1"
+        <element name="finiteBoundary" type="double" nillable="true" maxOccurs="1"
                  minOccurs="1" />
         <element name="finiteBoundaryType" type="tns:FiniteBoundaryTypeEnum"
                  maxOccurs="1" minOccurs="1" />
@@ -4064,7 +4064,7 @@
 
   <complexType name="ProbabilityValuePair">
     <sequence>
-      <element name="value" type="double" maxOccurs="1" minOccurs="1" />
+      <element name="value" type="double" nillable="true" maxOccurs="1" minOccurs="1" />
       <element name="probability" type="tns:Probability" nillable="true" maxOccurs="1"
                minOccurs="1" />
     </sequence>
