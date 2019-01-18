@@ -856,7 +856,7 @@
       <element name="contaminatedAbioticThing" type="tns:AbioticThingEnum"
                maxOccurs="1" minOccurs="1" />
       <element name="transmissionProbability" type="tns:ProbabilisticParameter"
-               maxOccurs="1" minOccurs="1" />
+               maxOccurs="1" minOccurs="0" />
     </sequence>
   </complexType>
 
@@ -2764,7 +2764,7 @@
                    maxOccurs="1" minOccurs="1">
           </element>
           <element name="referenceId" type="nonNegativeInteger"
-                   maxOccurs="1" minOccurs="1">
+                   maxOccurs="1" minOccurs="0">
           </element>
         </sequence>
       </extension>
@@ -2844,7 +2844,7 @@
 				maxOccurs="unbounded" minOccurs="0" />
 			<element name="pathogenGeneSequence" type="string" maxOccurs="1"
 				minOccurs="0" />
-			<element name="references" type="tns:Reference" maxOccurs="unbounded"
+			<element name="referenceId" type="nonNegativeInteger" maxOccurs="1"
 				minOccurs="0" />
 			<!-- New elements added for Rabies case records -->
 			<!-- New elements added for Rabies case records -->
@@ -2889,9 +2889,9 @@
       <element name="countTitle" type="string" maxOccurs="1"
                minOccurs="1" />
       <element name="caseDefinitionsIncluded" type="tns:CaseDefinitionEnum"
-               maxOccurs="unbounded" minOccurs="1" />
+               maxOccurs="unbounded" minOccurs="0" />
       <element name="caseCountArrayDescription" type="tns:CaseCountArrayDescription"
-               minOccurs="1" maxOccurs="1" />
+               minOccurs="0" maxOccurs="1" />
       <choice>
         <element name="totalCount" type="nonNegativeInteger"
                  maxOccurs="1" minOccurs="1" />
@@ -2943,7 +2943,7 @@
   <complexType name="CaseCountArrayDescription">
     <sequence>
       <element name="caseCountArrayType" type="tns:CaseCountArrayTypeEnum"
-               minOccurs="1" maxOccurs="1" />
+               minOccurs="0" maxOccurs="1" />
       <element name="startDateOfDataSeries" type="date" minOccurs="1"
                maxOccurs="1" />
       <element name="resetDates" type="date" minOccurs="0"
@@ -3031,7 +3031,7 @@
                maxOccurs="1" minOccurs="1">
       </element>
       <element name="referenceId" type="nonNegativeInteger"
-               maxOccurs="1" minOccurs="1">
+               maxOccurs="1" minOccurs="0">
       </element>
     </sequence>
   </complexType>
