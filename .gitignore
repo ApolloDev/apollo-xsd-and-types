@@ -10,3 +10,7 @@ target/
 **/*.idea/
 /src/main/xsd/
 .*.swp
+*.pyc
+apollo_new.xsd
+xsd_type_to_apollo_sv.csv
+__pycache__

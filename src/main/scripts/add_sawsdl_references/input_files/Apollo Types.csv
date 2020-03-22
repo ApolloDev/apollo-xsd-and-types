@@ -1,0 +1,140 @@
+XSD Type,Apollo-SV Class Label,Apollo-SB Class IRI
+Probability,probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000470
+Fraction,fraction,http://purl.obolibrary.org/obo/UO_0000191
+SimulatorTimeSpecification,simulator time specification,http://purl.obolibrary.org/obo/APOLLO_SV_00000183
+IndividualTreatmentControlMeasure,individual treatment control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000194
+Vaccination,vaccination,http://purl.obolibrary.org/obo/APOLLO_SV_00000142
+RingIndividualTreatmentControlMeasure,ring individual treatment control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000409
+Infection,infection in population,http://purl.obolibrary.org/obo/APOLLO_SV_00000331
+Contamination,contamination,http://purl.obolibrary.org/obo/APOLLO_SV_00000186
+PopulationInfectionAndImmunityCensus,population infection and immunity census,http://purl.obolibrary.org/obo/APOLLO_SV_00000157
+ApolloLocationCode,apollo location code,http://purl.obolibrary.org/obo/APOLLO_SV_00000259
+Vaccine,vaccine,http://purl.obolibrary.org/obo/VO_0000001
+VaccineContraindications,vaccine contraindication,http://purl.obolibrary.org/obo/VO_0000207
+AntiviralTreatment,antiviral treatment,http://purl.obolibrary.org/obo/APOLLO_SV_00000171
+DrugTreatment,drug treatment,http://purl.obolibrary.org/obo/APOLLO_SV_00000318
+TargetPopulationDefinition,target population definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000375
+AgeRangeCategoryDefinition,age range category,http://purl.obolibrary.org/obo/APOLLO_SV_00000241
+TimeSpanCategoryDefinition,name of temporal interval,http://purl.obolibrary.org/obo/APOLLO_SV_00000242
+RealTimeSpanCategoryDefinition,real time span category definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000385
+RealDateSpanCategoryDefinition,real date span category definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000386
+RealTimePointCategoryDefinition,name of a temporal boundary,http://purl.obolibrary.org/obo/APOLLO_SV_00000376
+ControlMeasureTargetPopulationsAndPrioritization,control strategy target populations and prioritizations,http://purl.obolibrary.org/obo/APOLLO_SV_00000127
+InfectiousDiseaseControlMeasure,infectious disease control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000086
+TemporalTriggerDefinition,temporal trigger definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000271
+TreatmentSurveillanceTriggerDefinition,treatment surveillance trigger definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000270
+TriggerDefinition,infectious disease control strategy trigger definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000261
+TreatmentContraindication,treatment contraindication,http://purl.obolibrary.org/obo/APOLLO_SV_00000378
+Duration,duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000243
+FixedDuration,fixed duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000384
+UncertainDuration,uncertain duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000379
+Treatment,treatment,http://purl.obolibrary.org/obo/OGMS_0000090
+BayesianNetwork,Bayesian network,http://purl.obolibrary.org/obo/APOLLO_SV_00000082
+TreatmentPreventableOutcomeEnum,treatment preventable outcome,http://purl.obolibrary.org/obo/APOLLO_SV_00000290
+TreatmentEfficacy,infectious disease treatment efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000227
+VaccinationEfficacyInferred,vaccination efficacy inferred,http://purl.obolibrary.org/obo/APOLLO_SV_00000193
+VaccinationEfficacyMeasured,measured vaccination efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000089
+VaccinationEfficacyStudy,vaccination efficacy study design execution,http://purl.obolibrary.org/obo/APOLLO_SV_00000090
+AntiviralTreatmentEfficacy,antiviral treatment efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000048
+Ecosystem,ecosystem,http://purl.obolibrary.org/obo/APOLLO_SV_00000097
+BioticEcosystem,biotic ecosystem,http://purl.obolibrary.org/obo/APOLLO_SV_00000104
+AbioticEcosystem,abiotic ecosystem,http://purl.obolibrary.org/obo/APOLLO_SV_00000100
+LocationDefinition,location definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000377
+ApolloIndexableItem,indexable Apollo item,http://purl.obolibrary.org/obo/APOLLO_SV_00000202
+InfectionAcquisitionFromContaminatedAbioticThing,infection acquisition from contaminated thing,http://purl.obolibrary.org/obo/APOLLO_SV_00000264
+InfectionAcquisitionFromInfectedHost,infection acquisition from infectious host,http://purl.obolibrary.org/obo/APOLLO_SV_00000265
+InfectiousDiseaseScenario,infectious disease scenario,http://purl.obolibrary.org/obo/APOLLO_SV_00000184
+Epidemic,epidemic,http://purl.obolibrary.org/obo/APOLLO_SV_00000298
+AbioticThingCensus,abiotic ecosystem census,http://purl.obolibrary.org/obo/APOLLO_SV_00000309
+PopulationTreatmentCensus,population treatment census,http://purl.obolibrary.org/obo/APOLLO_SV_00000187
+ContaminationAcquisition,contamination acquisition,http://purl.obolibrary.org/obo/APOLLO_SV_00000167
+ContaminatedThingCensus,contaminated thing census,http://purl.obolibrary.org/obo/APOLLO_SV_00000201
+InfectiousDisease,infectious disease,http://purl.obolibrary.org/obo/APOLLO_SV_00000239
+ApolloPathogenCode,Apollo pathogen code,http://purl.obolibrary.org/obo/APOLLO_SV_00000219
+NcbiTaxonId,NCBI taxon identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000203
+SnomedId,SNOMED concept identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000469
+vaccineOntologyId,vaccine identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000117
+RxNormId,RxNorm drug concept identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000492
+ProbabilityDistribution,probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000215
+UnconditionalProbabilityDistribution,unconditional probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000247
+NonparametricProbabilityDistribution,nonparametric probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000249
+ParametricProbabilityDistribution,parametric probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000248
+DiscreteParametricProbabilityDistribution,discrete parametric probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000250
+ContinuousParametricProbabilityDistribution,continuous parametric probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000251
+LogNormalDistribution,log normal distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000079
+GammaDistribution,gamme distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000255
+WeibullDistribution,Weibull Distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000256
+ContinuousUniformDistribution,continuous uniform distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000257
+MeanWithConfidenceInterval,mean with confidence interval,http://purl.obolibrary.org/obo/APOLLO_SV_00000424
+MeanWithStandardDeviation,mean with standard deviation,http://purl.obolibrary.org/obo/APOLLO_SV_00000425
+MeanMedianMinimumMaximum,mean median minimum maximum summary statistics data structure,http://purl.obolibrary.org/obo/APOLLO_SV_00000462
+ConditionalProbabilityDistribution,conditional probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000245
+DiseaseOutcomeWithProbability,disease outcome with probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000428
+SeasonalityFunctionParameters,seasonal function parameters,http://purl.obolibrary.org/obo/APOLLO_SV_00000273
+Location,geographical region,http://purl.obolibrary.org/obo/GEO_000000372
+CensusData,census,http://purl.obolibrary.org/obo/APOLLO_SV_00000173
+Census,census taking,http://purl.obolibrary.org/obo/APOLLO_SV_00000389
+Individual,organism,http://purl.obolibrary.org/obo/OBI_0100026
+PlaceClosureControlMeasure,place closure control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000229
+CaseQuarantineControlMeasure,case isolation control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000230
+BorderControlMeasure,border control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000228
+VectorControlMeasure,vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000308
+WolbachiaControlMeasure,Wolbachia vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000390
+LarvicideControlMeasure,larvicide control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000328
+IndoorResidualSprayingVectorControlMeasure,indoor residual spraying vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000391
+ContainerReductionControlMeasure,container reduction vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000392
+Percent,ratio,http://purl.obolibrary.org/obo/UO_0000190
+Latitude,latitude coordinate measurement datum,http://purl.obolibrary.org/obo/OBI_0001620
+Longitude,longitude coordinate measurement datum,http://purl.obolibrary.org/obo/OBI_0001621
+TravelRestrictionControlMeasure,travel restriction control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000231
+DiseaseSurveillanceCapability,disease surveillance capability,http://purl.obolibrary.org/obo/APOLLO_SV_00000266
+TreatmentSurveillanceCapability,treatment surveillance capability,http://purl.obolibrary.org/obo/APOLLO_SV_00000394
+Rate,rate unit,http://purl.obolibrary.org/obo/UO_0000280
+Behavior,behavior,http://purl.obolibrary.org/obo/GO_0007610
+LifeCycle,life course ,http://purl.obolibrary.org/obo/OGMS_0000092
+MosquitoBehavior,individual mosquito behavior,http://purl.obolibrary.org/obo/APOLLO_SV_00000401
+HumanBehavior,individual human behavior,http://purl.obolibrary.org/obo/APOLLO_SV_00000402
+Distance,distance,http://purl.obolibrary.org/obo/PATO_0000040
+TransmissionProbability,transmission probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000211
+MosquitoReproduction,individual mosquito reproduction,http://purl.obolibrary.org/obo/APOLLO_SV_00000312
+LifeStageWithDurationAndMortality,life stages with duration and mortality,http://purl.obolibrary.org/obo/APOLLO_SV_00000417
+MortalityFunction,three dimensional cartesian spatial coordinate datum,http://purl.obolibrary.org/obo/IAO_0000403
+OvipositionSiteCensus,oviposition site census,http://purl.obolibrary.org/obo/APOLLO_SV_00000315
+CaseDefinition,case definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000296
+CaseList,infection case list,http://purl.obolibrary.org/obo/APOLLO_SV_00000397
+CaseRecord,infection case record,http://purl.obolibrary.org/obo/APOLLO_SV_00000398
+CaseCount,count of disease cases,http://purl.obolibrary.org/obo/APOLLO_SV_00000497
+EpidemicPeriod,epidemic interval,http://purl.obolibrary.org/obo/APOLLO_SV_00000400
+ContactDefinition,contact definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000408
+TransmissionTree,transmission tree,http://purl.obolibrary.org/obo/APOLLO_SV_00000403
+PopulationInfectionSurvey,population infection survey,http://purl.obolibrary.org/obo/APOLLO_SV_00000155
+PopulationSerologySurvey,population serology survey,http://purl.obolibrary.org/obo/APOLLO_SV_00000396
+Reference,citation,http://purl.obolibrary.org/obo/IAO_0000301
+ReproductionNumber,reproduction number,http://purl.obolibrary.org/obo/APOLLO_SV_00000043
+Interval,one-dimensional temporal region,http://purl.obolibrary.org/obo/BFO_0000038
+LoincId,LOINC identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000493
+DiseaseSurveillanceTriggerDefinition,disease surveillance trigger definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000269
+DiscreteNonparametricProbabilityDistribution,discrete nonparametric probability distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000252
+Colonization,colonization,http://purl.obolibrary.org/obo/APOLLO_SV_00000330
+ColonizationAcquisition,colonization acquisition,http://purl.obolibrary.org/obo/APOLLO_SV_00000332
+HealthcareFacility,hospital facility,http://purl.obolibrary.org/obo/OMRSE_00000063
+SchoolFacility,school facility,http://purl.obolibrary.org/obo/OMRSE_00000064
+Household,household,http://purl.obolibrary.org/obo/OMRSE_00000076
+NormalDistribution,normal distribution,http://purl.obolibrary.org/obo/APOLLO_SV_00000036
+IndividualDisease,disease,http://purl.obolibrary.org/obo/OGMS_0000031
+ContactIsolationControlMeasure,contact isolation control measure,http://purl.obolibrary.org/obo/APOLLO_SV_00000489
+InsecticideTreatedNetControlMeasure,insecticide-treated net control measure,http://purl.obolibrary.org/obo/APOLLO_SV_00000499
+DecolonizationControlMeasure,decolonization control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000333
+Population,population,http://purl.obolibrary.org/obo/PCO_0000001
+FacilityId,facility identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000508
+PopulationColonizationCensus,population colonization census,http://purl.obolibrary.org/obo/APOLLO_SV_00000501
+Reproduction ,reproduction,http://purl.org/obo/owl/GO#GO_0000003
+SyntheticEcosystem,synthetic ecosystem data set,http://purl.obolibrary.org/obo/APOLLO_SV_00000528
+Schedule,schedule,http://purl.obolibrary.org/obo/APOLLO_SV_00000500
+SoftwareIdentification,complete software identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000106
+SoftwareLicenseIdentification,complete software license identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000536
+CaseSeries,case series,http://purl.obolibrary.org/obo/APOLLO_SV_00000558
+EpidemicCaseCounts,count of cases in an epidemic,http://purl.obolibrary.org/obo/APOLLO_SV_00000498
+VoluntaryHouseholdQuarantineControlMeasure,voluntary household quarantine control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000322
+LiberalSickLeaveControlMeasure,liberal sick leave control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000323
+LatLongPair,latitude and longitude coordinate pair,http://purl.obolibrary.org/obo/APOLLO_SV_00000503

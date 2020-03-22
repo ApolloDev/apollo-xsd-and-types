@@ -1,0 +1,166 @@
+XSD Element,Apollo-SV Class Label,Apollo-SV Class IRI,Type(s) that it is part of
+unitOfTimeForSimulatorTimeStep,simulation time step unit,http://purl.obolibrary.org/obo/APOLLO_SV_00000014,SimulatorTimeSpecification
+numberOfUnitsOfTimeInOneSimulatorTimeStep,simulation time step value,http://purl.obolibrary.org/obo/APOLLO_SV_00000012,SimulatorTimeSpecification
+runLength,simulation run length,http://purl.obolibrary.org/obo/APOLLO_SV_00000015,SimulatorTimeSpecification
+pathogen,pathogen,http://purl.obolibrary.org/obo/APOLLO_SV_00000237,"Infection, Contamination, Colonization, PopulationInfectionAndImmunityCensus, PopulationColonizationCensus, IndividualTreatmentControlMeasure, Treatment, DiseaseSurveillanceCapability, "
+compliance,control strategy compliance,http://purl.obolibrary.org/obo/APOLLO_SV_00000139,"IndividualTreatmentControlMeasure, CaseQuarantineControlMeasure, ContactIsolationControlMeasure, TravelRestrictionControlMeasure, InfectiousDiseaseControlStrategy, TemplatedInfectiousDiseaseControlMeasureUrlForSoftware"
+delayFromSymptomsToTreatment,delay from symptoms to treatment,http://purl.obolibrary.org/obo/APOLLO_SV_00000258,IndividualTreatmentControlMeasure
+targetPopulationsAndPrioritizations,target populations and prioritizations information,http://purl.obolibrary.org/obo/APOLLO_SV_00000282,IndividualTreatmentControlMeasure
+vaccinationEfficacies,vaccination efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000025,"Vaccination, VaccinationEfficacyForSimulatorConfiguration"
+ringDiameterInMeters,ring diameter in meters,http://purl.obolibrary.org/obo/APOLLO_SV_00000430,RingIndividualTreatmentControlMeasure
+contaminationDuration,contamination period duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000505,Contamination
+populationSpecies,identifier of species of population,http://purl.obolibrary.org/obo/APOLLO_SV_00000491,PopulationTreatmentCensus
+description,description,http://purl.obolibrary.org/obo/APOLLO_SV_00000476,"Census, InfectiousDiseaseControlMeasure, LogisticalSystemNode, Treatment, TreatmentContraindication, Vaccine, VaccinationEfficacyStudy, TargetPriorityPopulation, NonApolloParameter, TreatmentSystemLogistics, ClaraDensityDependentMortalityFunction"
+valence,vaccine valence,http://purl.obolibrary.org/obo/APOLLO_SV_00000137,Vaccine
+antiviralId,antiviral identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000122,AntiviralTreatment
+drugId,drug identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000461,DrugTreatment
+drugTreatmentEfficacy,drug treatment efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000502,DrugTreatment
+sex,gender role,http://purl.obolibrary.org/obo/OMRSE_00000007,"TargetPopulationDefinition, LocationDefinition, CaseRecord, CategoryDefinition, PopulationInfectionAndImmunityCensusDataCell, PopulationTreatmentCensusDataCell"
+diseaseOutcome,disease outcome,http://purl.obolibrary.org/obo/APOLLO_SV_00000204,"TargetPopulationDefinition, DiseaseOutcomeWithProbability, DiseaseOutcomeWithLocationDateTime, DiseaseOutcomeCategoryDefinition"
+infectionState,infection state data item,http://purl.obolibrary.org/obo/APOLLO_SV_00000217,PopulationInfectionAndImmunityCensusDataCell
+fractionInState,ascertainment fraction,http://purl.obolibrary.org/obo/APOLLO_SV_00000135,PopulationInfectionAndImmunityCensusDataCell
+lowerBound,lower bound,http://purl.obolibrary.org/obo/APOLLO_SV_00000436,"MeanWithConfidenceInterval, SimulatorTimeRange, MeasuredQuantityRangeCategoryDefinition"
+upperBound,upper bound,http://purl.obolibrary.org/obo/APOLLO_SV_00000447,"MeanWithConfidenceInterval, SimulatorTimeRange, MeasuredQuantityRangeCategoryDefinition"
+unitOfTime,time unit,http://purl.obolibrary.org/obo/UO_0000003,"Duration, TimeSpanCategoryDefinition"
+date,date,http://purl.obolibrary.org/obo/APOLLO_SV_00000429,"CensusData, Ecosystem, InfectionOutcomeWithDate, DiseaseOutcomeWithDate, RealTimePointCategoryDefinition"
+place,place,http://purl.obolibrary.org/obo/OMRSE_00000062,"DiseaseOutcomeWithLocationDateTime, PlaceVisited, PlaceCategoryDefinition"
+controlMeasureNamedPrioritizationScheme,prioritization scheme for control measure,http://purl.obolibrary.org/obo/APOLLO_SV_00000517,ControlMeasureTargetPopulationsAndPrioritization
+controlMeasureStartTime,control strategy start time information,http://purl.obolibrary.org/obo/APOLLO_SV_00000208,InfectiousDiseaseControlMeasure
+controlMeasureStopTime,control strategy stop time information,http://purl.obolibrary.org/obo/APOLLO_SV_00000260,InfectiousDiseaseControlMeasure
+controlMeasureResponseDelay,control strategy response delay,http://purl.obolibrary.org/obo/APOLLO_SV_00000133,InfectiousDiseaseControlMeasure
+controlMeasureStandDownDelay,control strategy stand-down delay,http://purl.obolibrary.org/obo/APOLLO_SV_00000263,InfectiousDiseaseControlMeasure
+referenceId,citation identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000519,"InfectiousDiseaseControlMeasure, PreEpidemicEcosystemCensus, CaseDefinition, CaseCount, DeprecatedCaseCount, ContactDefinition, RelativeRiskDataSet, PopulationInfectionSurvey, PopulationSerologySurvey, Duration, Interval, UncertainValue, ReproductionNumber"
+reactiveControlMeasureTest,reactive control strategy test,http://purl.obolibrary.org/obo/APOLLO_SV_00000130,"DiseaseSurveillanceTriggerDefinition, TreatmentSurveillanceTriggerDefinition"
+reactiveControlMeasureThreshold,reactive control strategy threshold,http://purl.obolibrary.org/obo/APOLLO_SV_00000131,"DiseaseSurveillanceTriggerDefinition, TreatmentSurveillanceTriggerDefinition"
+unitOfMeasureForThreshold,reactive control strategy theshold unit of measure,http://purl.obolibrary.org/obo/APOLLO_SV_00000295,"DiseaseSurveillanceTriggerDefinition, TreatmentSurveillanceTriggerDefinition"
+reactiveControlMeasureOperator,reactive control measure operator,http://purl.obolibrary.org/obo/APOLLO_SV_00000474,"DiseaseSurveillanceTriggerDefinition, TreatmentSurveillanceTriggerDefinition"
+timeScale,time scale name,http://purl.obolibrary.org/obo/APOLLO_SV_00000268,TemporalTriggerDefinition
+timeSinceTimeScaleZero,time since time scale zero,http://purl.obolibrary.org/obo/APOLLO_SV_00000272,TemporalTriggerDefinition
+simulatorReferencablePopulation,simulated population,http://purl.obolibrary.org/obo/APOLLO_SV_00000031,TreatmentContraindication
+speciesOfTreatedOrganism,species of treated organism,http://purl.obolibrary.org/obo/APOLLO_SV_00000460,Treatment
+numDosesInTreatmentCourse,number of doses in a treatment course,http://purl.obolibrary.org/obo/APOLLO_SV_00000281,Treatment
+durationOfTreatmentCourse,duration of treatment course,http://purl.obolibrary.org/obo/APOLLO_SV_00000280,Treatment
+simulatorTime,time step identifying numeral,http://purl.obolibrary.org/obo/APOLLO_SV_00000069,"TimeDefinition, Census"
+vaccinationPreventableOutcome,vaccination preventable outcome,http://purl.obolibrary.org/obo/APOLLO_SV_00000218,VaccinationEfficacyStudy
+dataSets,data set,http://purl.obolibrary.org/obo/IAO_0000100,VaccinationEfficacyStudy
+efficacy,efficacy,http://purl.obolibrary.org/obo/APOLLO_SV_00000454,"AntiviralTreatmentEfficacy, ContactIsolationControlMeasure"
+houses,housing unit,http://purl.obolibrary.org/obo/OMRSE_00000074,AbioticEcosystemData
+label,data item label,http://purl.obolibrary.org/obo/IAO_0000009,"TimeAxisCategoryLabels, AgeRangeCategoryDefinition"
+latentPeriodDuration,latent period duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000017,InfectionAcquisitionFromInfectedHost
+infectiousPeriodDuration,infectious period duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000016,InfectionAcquisitionFromInfectedHost
+basicReproductionNumbers,basic reproduction number,http://purl.obolibrary.org/obo/APOLLO_SV_00000002,InfectionAcquisitionFromInfectedHost
+beta,transmission coefficient,http://purl.obolibrary.org/obo/APOLLO_SV_00000191,"InfectionAcquisitionFromInfectedHost, InfectionAcquisitionFromColonizedHost, ColonizationAcquisition"
+infectiousnessProfile,infectiousness profile,http://purl.obolibrary.org/obo/APOLLO_SV_00000226,GesInfectiousnessParameterSet
+scenarioDate,scenario date,http://purl.obolibrary.org/obo/APOLLO_SV_00000185,InfectiousDiseaseScenario
+acknowledgements,acknowledgements section,http://purl.obolibrary.org/obo/IAO_0000324,"Epidemic, CaseSeries"
+disease,disease,http://purl.obolibrary.org/obo/OGMS_0000031,InfectiousDisease
+speciesWithDisease,identifier of species of diseased organism,http://purl.obolibrary.org/obo/APOLLO_SV_00000484,InfectiousDisease
+incubationPeriod,incubation period,http://purl.obolibrary.org/obo/APOLLO_SV_00000317,InfectiousDisease
+cladeName,clade name,http://purl.obolibrary.org/obo/APOLLO_SV_00000232,ApolloPathogenCode
+mean,average value,http://purl.obolibrary.org/obo/OBI_0000679,"LogNormalDistribution, NormalDistribution, MeanWithConfidenceInterval, MeanWithStandardDeviation, MeanMedianMinimumMaximum"
+standardDeviation,standard deviation,http://purl.obolibrary.org/obo/APOLLO_SV_00000448,"LogNormalDistribution, NormalDistribution, MeanWithStandardDeviation"
+cutTailAt,cut-off point specification,http://purl.obolibrary.org/obo/APOLLO_SV_00000481,"LogNormalDistribution, NormalDistribution, GammaDistribution, WeibullDistribution"
+minimumValue,minimum value,http://purl.obolibrary.org/obo/APOLLO_SV_00000432,"ContinuousUniformDistribution, MeanMedianMinimumMaximum, OneWaySensitivityAnalysisOfContinousVariableSpecification"
+maximumValue,maximum value,http://purl.obolibrary.org/obo/APOLLO_SV_00000433,"ContinuousUniformDistribution, MeanMedianMinimumMaximum, OneWaySensitivityAnalysisOfContinousVariableSpecification"
+confidence,statistical confidence,http://purl.obolibrary.org/obo/APOLLO_SV_00000434,MeanWithConfidenceInterval
+sampleSize,study group population size,http://purl.obolibrary.org/obo/STATO_0000088,"MeanWithConfidenceInterval, MeanWithStandardDeviation, MeanMedianMinimumMaximum"
+median,center value,http://purl.obolibrary.org/obo/OBI_0000674,MeanMedianMinimumMaximum
+name,identifier,http://purl.obolibrary.org/obo/IAO_0020000,"CategoricalVariableNode, IndividualDecolonization, ConditioningVariable"
+count,count,http://purl.obolibrary.org/obo/APOLLO_SV_00000032,"Population, SimulatorCountOutput"
+maximumSeasonalLatitude,maximum seasonal latitude,http://purl.obolibrary.org/obo/APOLLO_SV_00000274,SeasonalityFunctionParameters
+minimumSeasonalLatitude,minimum seasonal latitude,http://purl.obolibrary.org/obo/APOLLO_SV_00000275,SeasonalityFunctionParameters
+seasonalTemporalOffset,seasonal temporal offset,http://purl.obolibrary.org/obo/APOLLO_SV_00000276,SeasonalityFunctionParameters
+referenceDate,census reference date,http://purl.obolibrary.org/obo/APOLLO_SV_00000240,Census
+conditionalProbability,conditional probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000529,ConditionalIndividualBehavior
+closurePeriod,place closure period,http://purl.obolibrary.org/obo/APOLLO_SV_00000287,PlaceClosureControlMeasure
+householdTransmissionMultiplier,household transmission multiplier,http://purl.obolibrary.org/obo/APOLLO_SV_00000284,"PlaceClosureControlMeasure, CaseQuarantineControlMeasure"
+communityTransmissionMultiplier,community transmission multiplier,http://purl.obolibrary.org/obo/APOLLO_SV_00000288,PlaceClosureControlMeasure
+quarantinePeriod,quarantine period,http://purl.obolibrary.org/obo/APOLLO_SV_00000449,CaseQuarantineControlMeasure
+schoolTransmissionMultiplier,school transmission multiplier,http://purl.obolibrary.org/obo/APOLLO_SV_00000283,CaseQuarantineControlMeasure
+workplaceTransmissionMultiplier,workplace transmission multiplier,http://purl.obolibrary.org/obo/APOLLO_SV_00000285,CaseQuarantineControlMeasure
+probabilityEntryDenied,probability of entry from a country is denied,http://purl.obolibrary.org/obo/APOLLO_SV_00000278,BorderControlMeasure
+probabilityExitDenied,probability of exit from a country is denied,http://purl.obolibrary.org/obo/APOLLO_SV_00000279,BorderControlMeasure
+wolbachiaSitesEveryNth,Wolbachia every nth site release action specification,http://purl.obolibrary.org/obo/APOLLO_SV_00000411,WolbachiaControlMeasure
+wolbachiaSeedAdultsPerHouse,number of Wolbachia-infected mosquitoes released per house,http://purl.obolibrary.org/obo/APOLLO_SV_00000426,WolbachiaControlMeasure
+clearWolbachiaOnMigration,clear Wolbachia upon vector migration,http://purl.obolibrary.org/obo/APOLLO_SV_00000427,WolbachiaControlMeasure
+wolbachiaReleaseInterval,Wolbachia release interval,http://purl.obolibrary.org/obo/APOLLO_SV_00000423,WolbachiaControlMeasure
+wolbachiaReleaseSites,Wolbachia release site,http://purl.obolibrary.org/obo/APOLLO_SV_00000410,WolbachiaControlMeasure
+wolbachiaEffectOnEggMortalityRate,Wolbachia effect on egg mortality rate in mosquito population,http://purl.obolibrary.org/obo/APOLLO_SV_00000418,WolbachiaControlMeasure
+wolbachiaEffectOnAdultMortalityRate,Wolbachia effect on adult mortality rate in mosquito population,http://purl.obolibrary.org/obo/APOLLO_SV_00000419,WolbachiaControlMeasure
+wolbachiaEffectOnLarvalMortalityRate,Wolbachia effect on larval mortality rate in mosquito population,http://purl.obolibrary.org/obo/APOLLO_SV_00000420,WolbachiaControlMeasure
+wolbachiaEffectOnFecundity,Wolbachia effect on female fecundity in mosquito population,http://purl.obolibrary.org/obo/APOLLO_SV_00000421,WolbachiaControlMeasure
+wolbachiaEffectOnMatingProbability,Wolbachia effect on mating probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000431,WolbachiaControlMeasure
+wolbachiaEffectOnLeakageRate,leakage rate of Wolbachia infection in mosquito population infected with Wolbachia,http://purl.obolibrary.org/obo/APOLLO_SV_00000412,WolbachiaControlMeasure
+wolbachiaEffectOnVectorialCapacity,transmission rate of pathogen to human from Wolbachia-infected mosquito bites,http://purl.obolibrary.org/obo/APOLLO_SV_00000413,WolbachiaControlMeasure
+wolbachiaPreReleaseAdultSuppressionEfficacy,Wolbachia prerelease adult vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000415,WolbachiaControlMeasure
+wolbachiaPreReleaseLarvalSuppressionEfficacy,Wolbachia prerelease larvicide vector control strategy,http://purl.obolibrary.org/obo/APOLLO_SV_00000416,WolbachiaControlMeasure
+coverRadius,infectious disease control strategy cover radius,http://purl.obolibrary.org/obo/APOLLO_SV_00000459,"LarvicideControlMeasure, IndoorResidualSprayingVectorControlMeasure, ContainerReductionControlMeasure"
+fractionOfVectorIndividualsAffected,fraction of vector adults affected,http://purl.obolibrary.org/obo/APOLLO_SV_00000437,IndoorResidualSprayingVectorControlMeasure
+fractionReductionOfEggs,fraction reduction of eggs,http://purl.obolibrary.org/obo/APOLLO_SV_00000438,ContainerReductionControlMeasure
+fractionReductionOfLarvae,fraction reduction of larvae,http://purl.obolibrary.org/obo/APOLLO_SV_00000439,ContainerReductionControlMeasure
+maximumTravelDistanceInKm,maximum travel distance in km information,http://purl.obolibrary.org/obo/APOLLO_SV_00000289,TravelRestrictionControlMeasure
+speciesOfCase,identifier for species of case,http://purl.obolibrary.org/obo/APOLLO_SV_00000485,"DiseaseSurveillanceCapability, CaseList, CaseSeries"
+sensitivityOfCaseDetection,sensitivity of case detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000277,DiseaseSurveillanceCapability
+specificityOfCaseDetection,specificity of case detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000381,DiseaseSurveillanceCapability
+timeDelayOfCaseDetection,time delay of case detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000267,DiseaseSurveillanceCapability
+sensitivityOfTreatmentDetection,sensitivity of treatment detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000383,TreatmentSurveillanceCapability
+specificityOfTreatmentDetection,specificity of treatment detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000382,TreatmentSurveillanceCapability
+timeDelayOfTreatmentDetection,time delay of treatment detection,http://purl.obolibrary.org/obo/APOLLO_SV_00000291,TreatmentSurveillanceCapability
+biteProbability,vector bite probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000457,MosquitoBehavior
+biteRadius,vector bite radius,http://purl.obolibrary.org/obo/APOLLO_SV_00000440,MosquitoBehavior
+timeBetweenBites,time between vector bites,http://purl.obolibrary.org/obo/APOLLO_SV_00000441,MosquitoBehavior
+migrationSpeed,migration speed,http://purl.obolibrary.org/obo/APOLLO_SV_00000442,MosquitoBehavior
+shadeAffinity,shade affinity,http://purl.obolibrary.org/obo/APOLLO_SV_00000443,MosquitoBehavior
+maleMatingRadius,male mosquito mating radius,http://purl.obolibrary.org/obo/APOLLO_SV_00000458,MosquitoBehavior
+matingProbability,mosquito mating probability,http://purl.obolibrary.org/obo/APOLLO_SV_00000450,MosquitoBehavior
+straightTravelAfterOviposit,linear distance travelled between oviposits,http://purl.obolibrary.org/obo/APOLLO_SV_00000452,MosquitoBehavior
+speedOfMovement,movement speed,http://purl.obolibrary.org/obo/APOLLO_SV_00000444,HumanBehavior
+buildingAffinity,affinity for buildings,http://purl.obolibrary.org/obo/APOLLO_SV_00000451,HumanBehavior
+unitOfDistance,length unit,http://purl.obolibrary.org/obo/UO_0000001,Distance
+gonotrophicPeriodDuration,gonotrophic cycle duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000313,MosquitoReproduction
+eggsPerBrood,eggs per brood,http://purl.obolibrary.org/obo/APOLLO_SV_00000453,MosquitoReproduction
+minimumEggsPerOviposition,minimum eggs per oviposition site,http://purl.obolibrary.org/obo/APOLLO_SV_00000471,MosquitoReproduction
+ageDependentFecundityReduction,age-dependent fecundity reduction,http://purl.obolibrary.org/obo/APOLLO_SV_00000472,MosquitoReproduction
+mortalityRate,mortality rate,http://purl.obolibrary.org/obo/APOLLO_SV_00000445,LifeStageWithDurationAndMortality
+radius,radius,http://purl.obolibrary.org/obo/PATO_0002390,CartesianCircleLocationDefinition
+breteauIndex,Breteau Index,http://purl.obolibrary.org/obo/APOLLO_SV_00000311,OvipositionSiteCensus
+carryingCapacityPerHouse,carrying capacity per house,http://purl.obolibrary.org/obo/APOLLO_SV_00000473,OvipositionSiteCensus
+heterogenousCarryingCapacity,heterogenous carrying capacity,http://purl.obolibrary.org/obo/APOLLO_SV_00000463,OvipositionSiteCensus
+ratioOfOutdoorToIndoorOvisites,ratio of outdoor to indoor ovisites,http://purl.obolibrary.org/obo/APOLLO_SV_00000446,OvipositionSiteCensus
+investigationLabel,investigation identifier,http://purl.obolibrary.org/obo/OBI_0001628,"CaseDefinition, ContactDefinition"
+investigationDefinition,investigation description,http://purl.obolibrary.org/obo/OBI_0001615,"CaseDefinition, ContactDefinition"
+caseId,disease case identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000510,CaseRecord
+ageInYears,age in years datum,http://purl.obolibrary.org/obo/APOLLO_SV_00000504,CaseRecord
+categoricalVariable,categorical variable,http://purl.obolibrary.org/obo/STATO_0000252,CaseRecordCategoricalVariable
+variable,variable,http://purl.obolibrary.org/obo/STATO_0000258,"CaseVariableAndValue, VariableAndCategoryDefinitions"
+whereSampled,location of sampling process,http://purl.obolibrary.org/obo/APOLLO_SV_00000520,"PopulationInfectionSurvey, PopulationSerologySurvey"
+testLoincId,laboratory test LOINC identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000494,"PopulationInfectionSurvey, PopulationSerologySurvey"
+authors,author list,http://purl.obolibrary.org/obo/IAO_0000321,Reference
+publication,publication,http://purl.obolibrary.org/obo/IAO_0000311,Reference
+url,unique resource locator,http://purl.obolibrary.org/obo/OMIABIS_0000019,"Reference, HouseholdsPointerToData"
+pubMedId,PubMed identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000495,Reference
+orcId,ORCID,http://purl.obolibrary.org/obo/APOLLO_SV_00000496,Reference
+host,host,http://purl.obolibrary.org/obo/APOLLO_SV_00000238,"Infection, Colonization"
+capacitySchedule,treatment administration capacity schedule,http://purl.obolibrary.org/obo/APOLLO_SV_00000212,LogisticalSystemNode
+taxonId,taxonomy identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000509,Population
+colonizationDuration,colonization duration,http://purl.obolibrary.org/obo/APOLLO_SV_00000490,Colonization
+probabilityOfInfectionOverTime,probability of infection over time,http://purl.obolibrary.org/obo/APOLLO_SV_00000530,Colonization
+healthcareFacilityId,healthcare facility identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000506,HealthcareFacilityCategoryDefinition
+facilityId,facility identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000508,Facility
+softwareDeveloper,software developer identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000105,SoftwareIdentification
+softwareName,software identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000109,SoftwareIdentification
+softwareVersion,software version identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000108,SoftwareIdentification
+softwareType,software method,http://purl.obolibrary.org/obo/IAO_0000591,SoftwareIdentification
+licenseLocation,software license URL,http://purl.obolibrary.org/obo/APOLLO_SV_00000539,SoftwareLicenseIdentification
+licenseVersion,software license version identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000537,SoftwareLicenseIdentification
+licenseName,software license identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000538,SoftwareLicenseIdentification
+administrativeLocations,major administrative subdivision,http://purl.obolibrary.org/obo/GEO_000000005,Epidemic
+unitId,measurement unit label,http://purl.obolibrary.org/obo/IAO_0000003,Unit
+modelId,disease transmission model identifier,http://purl.obolibrary.org/obo/APOLLO_SV_00000507,ModelIdAndProbability
+totalCaseCount,total disease cases,http://purl.obolibrary.org/obo/APOLLO_SV_00000569,EpidemicCaseCounts
+totalFatalCaseCount,total fatal disease cases,http://purl.obolibrary.org/obo/APOLLO_SV_00000568,EpidemicCaseCounts
+race,racial identity datum,http://purl.obolibrary.org/obo/OMRSE_00000098,CaseRecord
+employmentStatus,employment status data item,http://purl.obolibrary.org/obo/APOLLO_SV_00000570,EmploymentStatusCategoryDefinition
+contaminatedAbioticThing,contaminated abiotic thing,http://purl.obolibrary.org/obo/APOLLO_SV_00000571,InfectionAcquisitionFromContaminatedAbioticThing
+apolloLocationCode,apollo location code,http://purl.obolibrary.org/obo/APOLLO_SV_00000259,
+locationDefinition,location definition,http://purl.obolibrary.org/obo/APOLLO_SV_00000377,
